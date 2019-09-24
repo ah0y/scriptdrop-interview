@@ -1,0 +1,5 @@
+<h1>Edit Courier</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.courier_path(@conn, :update, @courier)) %>
+
+<span><%= link "Back", to: Routes.courier_path(@conn, :index) %></span>

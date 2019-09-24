@@ -1,0 +1,23 @@
+<h1>Show Order</h1>
+
+<ul>
+
+  <li>
+    <strong>Undelieverable:</strong>
+    <%= @order.undelieverable %>
+  </li>
+
+    <li>
+      <strong>Undelieverable:</strong>
+      <%= @order.delivered %>
+    </li>
+
+  <li>
+    <strong>Pickup date:</strong>
+    <%= @order.pickup_date %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.order_path(@conn, :edit, @order) %></span>
+<span><%= link "Back", to: Routes.order_path(@conn, :index) %></span>

@@ -1,0 +1,26 @@
+<h1>Listing Pharmacies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pharmacy <- @pharmacies do %>
+    <tr>
+      <td><%= pharmacy.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.pharmacy_path(@conn, :show, pharmacy) %></span>
+        <span><%= link "Edit", to: Routes.pharmacy_path(@conn, :edit, pharmacy) %></span>
+        <span><%= link "Delete", to: Routes.pharmacy_path(@conn, :delete, pharmacy), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Pharmacy", to: Routes.pharmacy_path(@conn, :new) %></span>
