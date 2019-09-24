@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="canada" type="mix">
+  <library name="canada">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/_build/dev/lib/canada/ebin" />
     </CLASSES>

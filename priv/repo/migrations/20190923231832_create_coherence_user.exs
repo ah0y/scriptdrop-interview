@@ -3,7 +3,7 @@ defmodule Scriptdrop.Repo.Migrations.CreateCoherenceUser do
   def change do
     create table(:users) do
 
-      add :is_pharmacy?, :boolean
+      add :role_id, references("roles")
       add :name, :string
       add :email, :string
       # authenticatable

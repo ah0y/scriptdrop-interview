@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$//scriptdrop.iml" filepath="$PROJECT_DIR$//scriptdrop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scriptdrop.iml" filepath="$PROJECT_DIR$/scriptdrop.iml" />
     </modules>
   </component>
 </project>

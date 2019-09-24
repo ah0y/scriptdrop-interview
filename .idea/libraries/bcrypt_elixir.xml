@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="bcrypt_elixir" type="mix">
+  <library name="bcrypt_elixir">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/_build/dev/lib/bcrypt_elixir/ebin" />
     </CLASSES>

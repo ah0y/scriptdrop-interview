@@ -3,13 +3,23 @@ defmodule Scriptdrop.Coherence.User do
   use Ecto.Schema
   use Coherence.Schema
 
+  alias Scriptdrop.Account.Role
+
   schema "users" do
     field(:name, :string)
     field(:email, :string)
-    field(:is_pharmacy?, :boolean)
-    belongs_to :pharmacy, Scriptdrop.Company.Pharmacy, foreign_key: :pharmacy_id
-    belongs_to :courier, Scriptdrop.Company.Courier, foreign_key: :courier_id
     coherence_schema()
+
+    many_to_many(
+      :roles,
+      Scriptdrop.Account.Role,
+      join_through: Scriptdrop.Account.UserRole,
+      join_keys: [
+        user_id: :id,
+        role_id: :id
+      ],
+      on_replace: :delete
+    )
 
     timestamps()
   end
@@ -18,9 +28,11 @@ defmodule Scriptdrop.Coherence.User do
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
   def changeset(model, params \\ %{}) do
     model
-    |> cast(params, [:pharmacy_id, :courier_id, :is_pharmacy?, :name, :email] ++ coherence_fields())
+    |> cast(params, [:name, :email] ++ coherence_fields())
     |> validate_required([:name, :email])
     |> validate_format(:email, ~r/@/)
+    |> Ecto.Changeset.change()
+    |> Ecto.Changeset.put_assoc(:roles, [%Scriptdrop.Account.Role{name: "so-so example!", pharmacy_id: 1} | model.roles])
     |> unique_constraint(:email)
     |> validate_coherence(params)
   end

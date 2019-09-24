@@ -74,3 +74,47 @@ Scriptdrop.Repo.insert!(
     }
   }
 )
+
+#Scriptdrop.Repo.insert!(
+#  %Scriptdrop.Coherence.User{
+#    name: "abe",
+#    email: "abe200@gmail.com",
+#    password: "password",
+#    password_hash: "$2b$12$yPfPx1nWGe3yb/UfLfPy.Op9REGVuZbVze85heRgsu9uAVj7/MTUK",
+##    pharmacy_id: 1
+#        roles: [
+#      %Scriptdrop.Account.Role{
+##        name: "pharmacy",
+#        pharmacy_id: 1
+#      }
+#    ]
+#  }
+#)
+
+#import Ecto.Changeset
+#
+#changeset = Scriptdrop.Coherence.User.changeset(
+#  %Scriptdrop.Coherence.User{},
+#  %{
+#    name: "abe",
+#    email: "abe03@gmail.com",
+#    password: "password",
+#    password_hash: "$2b$12$yPfPx1nWGe3yb/UfLfPy.Op9REGVuZbVze85heRgsu9uAVj7/MTUK",
+#    pharmacy_id: 1
+#    #   roles: [
+#    #      %Scriptdrop.Account.Role{
+#    #        name: "pharmacy",
+#    #        pharmacy_id: 1
+#    #      }
+#    #    ]
+#  }
+#)
+#
+#changeset = model
+#            |> Ecto.Changeset.change()
+#            |> Ecto.Changeset.put_assoc(
+#                 :roles,
+#                 [%Scriptdrop.Account.Role{name: "so-so example!", pharmacy_id: 1} | model.roles]
+#               )
+#
+#               break! Scriptdrop.Account.Role.changeset/2
