@@ -7,19 +7,19 @@ defmodule ScriptdropWeb.OrderController do
 #  plug :authorize_resource, model: Order
 #  use ScriptdropWeb.ControllerAuthorization
 
-  def index(conn, _params) do
+  def index(conn, _params, user) do
     orders = Customer.list_orders()
     render(conn, "index.html", orders: orders)
   end
 
-  def new(conn, _params) do
+  def new(conn, _params, user) do
     changeset = Customer.change_order(%Order{})
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"order" => order_params}) do
+  def create(conn, %{"order" => order_params}, user) do
 #    require IEx; IEx.pry()
-    case Customer.create_order(order_params) do
+    case Customer.create_order(Map.merge(%{"pharmacy_id" => user.id}, order_params)) do
       {:ok, order} ->
         conn
         |> put_flash(:info, "Order created successfully.")
@@ -30,7 +30,8 @@ defmodule ScriptdropWeb.OrderController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
+  def show(conn, %{"id" => id}, user) do
+#    require IEx; IEx.pry()
     order = Customer.get_order!(id)
     render(conn, "show.html", order: order)
   end
@@ -41,7 +42,7 @@ defmodule ScriptdropWeb.OrderController do
     render(conn, "edit.html", order: order, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "order" => order_params}) do
+  def update(conn, %{"id" => id, "order" => order_params}, user) do
     order = Customer.get_order!(id)
 
     case Customer.update_order(order, order_params) do
@@ -55,12 +56,20 @@ defmodule ScriptdropWeb.OrderController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
+  def delete(conn, %{"id" => id}, user) do
     order = Customer.get_order!(id)
     {:ok, _order} = Customer.delete_order(order)
 
     conn
     |> put_flash(:info, "Order deleted successfully.")
     |> redirect(to: Routes.order_path(conn, :index))
+  end
+
+  def action(conn, _) do
+    apply(
+      __MODULE__,
+      action_name(conn),
+      [conn, conn.params, conn.assigns.current_user]
+    )
   end
 end
