@@ -18,6 +18,7 @@ defmodule Scriptdrop.Customer.Order do
   def changeset(order, attrs) do
     order
     |> cast(attrs, [:delivered, :undelieverable, :pickup_date, :patient_id, :pharmacy_id])
-    |> validate_required([:delivered, :undelieverable, :pickup_date, :patient_id, :pharmacy_id])
+    |> cast_assoc(:patient, required: true)
+    |> validate_required([:delivered, :undelieverable, :pickup_date])
   end
 end

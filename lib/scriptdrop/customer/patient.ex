@@ -16,6 +16,7 @@ defmodule Scriptdrop.Customer.Patient do
   def changeset(patient, attrs) do
     patient
     |> cast(attrs, [:name, :address_id])
-    |> validate_required([:name, :address_id])
+    |> cast_assoc(:address, required: true)
+    |> validate_required([:name])
   end
 end

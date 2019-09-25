@@ -18,6 +18,7 @@ defmodule ScriptdropWeb.OrderController do
   end
 
   def create(conn, %{"order" => order_params}) do
+    require IEx; IEx.pry()
     case Customer.create_order(order_params) do
       {:ok, order} ->
         conn
