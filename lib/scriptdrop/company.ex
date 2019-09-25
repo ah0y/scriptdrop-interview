@@ -231,6 +231,5 @@ defmodule Scriptdrop.Company do
       |> Pharmacy.pharmacy_and_ids
     pharmacies = Repo.all query
     pharmacies = Enum.map(pharmacies, fn %{id: key, name: value} -> {:"#{value}", key} end)
-
   end
 end

@@ -30,9 +30,37 @@ defmodule Scriptdrop.Coherence.User do
     |> change(%{roles: "pharmacist"})
   end
 
+    @doc false
+  @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
+  def changeset(model, %{"roles" => roles} = params) when roles == "pharmacist" do
+    model
+    |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
+    |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
+    |> foreign_key_constraint(:pharmacy_id)
+    |> put_change(:courier_id, nil)
+    |> validate_required([:roles, :name, :email])
+    |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:email)
+    |> validate_coherence(params)
+  end
+
   @doc false
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
-  def changeset(model, %{} = params \\ %{}) do
+  def changeset(model, %{"roles" => roles} = params) when roles == "courier" do
+    model
+    |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
+    |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
+    |> foreign_key_constraint(:courier_id)
+    |> put_change(:pharmacy_id, nil)
+    |> validate_required([:roles, :name, :email])
+    |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:email)
+    |> validate_coherence(params)
+  end
+
+  @doc false
+  @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
+  def changeset(model, params \\ %{})  do
     model
     |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
     |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
@@ -44,15 +72,6 @@ defmodule Scriptdrop.Coherence.User do
 
   @doc false
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
-  def changeset(model, %{} = params \\ %{}) do
-    model
-    |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
-    |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
-    |> validate_required([:roles, :name, :email])
-    |> validate_format(:email, ~r/@/)
-    |> unique_constraint(:email)
-    |> validate_coherence(params)
-  end
 
   @doc false
   @spec changeset(Ecto.Schema.t(), Map.t(), atom) :: Ecto.Changeset.t()

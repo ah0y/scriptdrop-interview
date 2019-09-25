@@ -31,7 +31,8 @@ defmodule ScriptdropWeb.UserController do
 
   def show(conn, %{"id" => id}) do
     user = Account.get_user!(id)
-
+#    require IEx;
+#    IEx.pry()
     render(
       conn,
       "show.html",
@@ -44,6 +45,7 @@ defmodule ScriptdropWeb.UserController do
     pharmacies = Company.load_pharmacies()
     couriers = Company.load_couriers()
     changeset = Account.change_user(user)
+    #    require IEx; IEx.pry()
     render(conn, "edit.html", user: user, changeset: changeset, pharmacies: pharmacies, couriers: couriers)
   end
 
@@ -51,9 +53,10 @@ defmodule ScriptdropWeb.UserController do
     user = Account.get_user!(id)
     case Account.update_user(user, user_params) do
       {:ok, user} ->
-        conn
-        |> put_flash(:info, "User updated successfully.")
-        |> redirect(to: Routes.user_path(conn, :show, user))
+        conn = conn
+               |> Plug.Conn.put_session(:current_user, user)
+               |> put_flash(:info, "User updated successfully.")
+        redirect(conn, to: Routes.user_path(conn, :show, user))
       {:error, %Ecto.Changeset{} = changeset} ->
         pharmacies = Company.load_pharmacies()
         couriers = Company.load_couriers()
