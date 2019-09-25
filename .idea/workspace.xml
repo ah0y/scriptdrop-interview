@@ -1,489 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bed3aa74-dda3-41c2-8a6d-76c1985a34c7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/scriptdrop/account_test.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/bcrypt_elixir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/bcrypt_elixir.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/canada.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/canada.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/canary.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/canary.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/certifi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/certifi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/coherence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/coherence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/combine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/combine.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/comeonin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/comeonin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/connection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cowboy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowlib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cowlib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/csv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/csv.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/db_connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/db_connection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/decimal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/decimal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ecto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto_sql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ecto_sql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/elixir_make.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/elixir_make.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/elixir_uuid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/elixir_uuid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/file_system.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gettext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gettext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/hackney.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/hackney.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/idna.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/idna.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jason.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jason.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/metrics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/metrics.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mimerl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mimerl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parallel_stream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/parallel_stream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/parse_trans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/parse_trans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_ecto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_html.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_html.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_live_reload.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_pubsub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_pubsub.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_swoosh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/phoenix_swoosh.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug_cowboy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_crypto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plug_crypto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgrex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/postgrex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ranch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ranch.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ssl_verify_fun.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ssl_verify_fun.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/swoosh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/swoosh.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/telemetry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/telemetry.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/timex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/timex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/tzdata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/tzdata.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/unicode_util_compat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/unicode_util_compat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="d803bfb6-ebbb-48b0-be26-adddd7b279c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/bcrypt_elixir.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/canada.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/canary.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/certifi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/coherence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/combine.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/comeonin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/connection.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowboy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/cowlib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/csv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/db_connection.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/decimal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ecto_sql.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/elixir_make.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/elixir_uuid.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gettext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/hackney.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/idna.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jason.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/metrics.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mimerl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/parallel_stream.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/parse_trans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_ecto.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_html.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_pubsub.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/phoenix_swoosh.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_cowboy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plug_crypto.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgrex.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ranch.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ssl_verify_fun.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/swoosh.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/telemetry.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/timex.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/tzdata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/unicode_util_compat.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/account.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/account.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/account/role.ex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/account/user_role.ex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/company.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/company.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/company/courier.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/company/courier.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/company/pharmacy.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/company/pharmacy.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/address_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/address_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/coherence/registration/form.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/coherence/registration/form.html.eex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20190923214752_create_pharmacies.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20190923214752_create_pharmacies.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20190923231831_add_roles.exs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20190923231832_create_coherence_user.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20190923231832_create_coherence_user.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20190924180812_add_user_roles.exs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/seeds.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/seeds.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptdrop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/scriptdrop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/scriptdrop/accounts_test.exs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/connection/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/cowboy/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/cowlib/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/db_connection/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/decimal/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/ecto/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/ecto_sql/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/file_system/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/gettext/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/jason/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/mime/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/phoenix/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/phoenix_ecto/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/phoenix_html/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/phoenix_live_reload/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/phoenix_pubsub/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/plug/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/plug_cowboy/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/plug_crypto/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/postgrex/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/ranch/" />
-    <ignored path="$PROJECT_DIR$/_build/dev/lib/telemetry/" />
-    <ignored path="$PROJECT_DIR$/assets/node_modules/phoenix/" />
-    <ignored path="$PROJECT_DIR$/assets/node_modules/phoenix_html/" />
-    <ignored path="$PROJECT_DIR$/cover/" />
-    <ignored path="$PROJECT_DIR$/deps/" />
-    <ignored path="$PROJECT_DIR$/doc/" />
-    <ignored path="$PROJECT_DIR$/logs/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="user.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account/user.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20190923231832_create_coherence_user.exs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923231832_create_coherence_user.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20190923214752_create_pharmacies.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214752_create_pharmacies.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="31" selection-start-line="12" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_controller.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.html.eex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="27" column="74" lean-forward="true" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="company.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/order.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="66" selection-start-line="10" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courier.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company/courier.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pharmacy.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company/pharmacy.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="36" selection-start-line="10" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>coherence</find>
-      <find>librarian</find>
-      <find>undelieverable</find>
-      <find>book</find>
-      <find>orders</find>
-      <find>metro</find>
-      <find>MetroWeb.ControllerAuthorization</find>
-      <find>genre</find>
-      <find>_isbn</find>
-      <find>role</find>
-      <find>teacher</find>
-      <find>Accounts</find>
-      <find>student</find>
-      <find>form-</find>
-      <find>coherence.regist</find>
-      <find>scrub_params</find>
-      <find>create</find>
-      <find>allow</find>
-      <find>form-con</find>
-      <find>is_pharmacy?</find>
-      <find>plug :autho</find>
-      <find>abilities</find>
-      <find>Metro</find>
-      <find>patientview</find>
-      <find>courier_id</find>
-      <find>list_orders</find>
-      <find>alias</find>
-      <find>library</find>
-      <find>branch_and_</find>
-      <find>reu</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>ScriptdropWeb.ControllerAuthorization</replace>
-      <replace>role</replace>
-      <replace>_id</replace>
-      <replace>courier</replace>
-      <replace>pharmacist</replace>
-      <replace>Account</replace>
-      <replace>pharmacy</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/lib</dir>
-      <dir>$PROJECT_DIR$/_build/dev/lib</dir>
-      <dir>$PROJECT_DIR$/deps/coherence</dir>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/lib/scriptdrop/location/address.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923214744_create_couriers.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923214807_create_patients.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923214907_create_orders.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923225331_create_coherence_user.exs" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/layout/app.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/views/shared_view.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/order/index.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/coherence/user.ex" />
-        <option value="$PROJECT_DIR$/mix.exs" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/address_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/page_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/authorized.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923171757_add_roles.exs" />
-        <option value="$PROJECT_DIR$/lib/abilities.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/account/user_role.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190924180812_add_user_roles.exs" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/account/role.ex" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/account.ex" />
-        <option value="$PROJECT_DIR$/test/scriptdrop/accounts_test.exs" />
-        <option value="$PROJECT_DIR$/test/scriptdrop/account_test.exs" />
-        <option value="$PROJECT_DIR$/deps/coherence/lib/coherence/controllers/registration_controller_base.ex" />
-        <option value="$PROJECT_DIR$/config/config.exs" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/coherence/registration/form.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/user/show.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/router.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/views/user_view.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/show.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/customer.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/company/courier.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923214752_create_pharmacies.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/seeds.exs" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/company/pharmacy.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/company.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20190923231832_create_coherence_user.exs" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/assets/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/assets/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="100" />
-    <option name="y" value="91" />
-    <option name="width" value="1424" />
-    <option name="height" value="821" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="coherence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="coherence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="coherence" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop_web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="priv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="priv" type="462c0819:PsiDirectoryNode" />
-              <item name="repo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="priv" type="462c0819:PsiDirectoryNode" />
-              <item name="repo" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scriptdrop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scriptdrop" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RKP41hlWqizIhHyenrF6Ul8VO5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="create_coherence&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923231832_create_coherence_user.exs&#10;order.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;user.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/account/user.ex&#10;user/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/form.html.eex&#10;user/edit&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/edit.html.eex&#10;company&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company.ex&#10;user_c&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/user_controller.ex&#10;courier&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;seeds&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/seeds.exs&#10;create_pharm&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923214752_create_pharmacies.exs&#10;pharmacy&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;create_phar&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923214752_create_pharmacies.exs&#10;phar&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;registration/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/coherence/registration/form.html.eex&#10;user_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/user_controller.ex&#10;registration&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/coherence/registration&#10;user/&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user&#10;order/index&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/order/index.html.eex&#10;create_order&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923214907_create_orders.exs&#10;order_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;migrations&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations&#10;order&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;user/show&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/show.html.eex&#10;abilitie&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/abilities.ex&#10;navbar&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;controllers/&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers&#10;script&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web.ex&#10;abi&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/abilities.ex&#10;router&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;config&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/config/config.exs&#10;deps/&#9;null&#9;null&#10;mix.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/mix.exs&#10;create_user&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923231832_create_coherence_user.exs&#10;seeds.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/seeds.exs&#10;registration/new&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/coherence/registration/new.html.eex&#10;templates&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates&#10;account&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/account.ex&#10;account_test&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test/scriptdrop/accounts_test.exs&#10;giti&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/.gitignore&#10;seeds.e&#9;FILE&#9;file://C:/Users/hailea3/Downloads/drop/priv/repo/seeds.exs&#10;user_contro&#9;FILE&#9;file://C:/Users/hailea3/Downloads/drop/lib/scriptdrop_web/controllers/user_controller.ex&#10;role.ex&#9;FILE&#9;file://C:/Users/hailea3/Downloads/drop/lib/scriptdrop/account/role.ex&#10;user&#9;FILE&#9;file://C:/Users/hailea3/Downloads/drop/lib/scriptdrop/account/user.ex&#10;abilities&#9;FILE&#9;file://C:/Users/hailea3/Downloads/drop/lib/abilities.ex&#10;abilit&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/abilities.ex&#10;router.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;controllers&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers&#10;_web&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web.ex&#10;mix.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/mix.exs&#10;create_c&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/migrations/20190923231832_create_coherence_user.exs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/scriptdrop_web" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/scriptdrop_web/views" />
-      <recent name="$PROJECT_DIR$/lib/scriptdrop_web/templates" />
-      <recent name="$PROJECT_DIR$/lib/scriptdrop/account" />
-      <recent name="$PROJECT_DIR$/lib" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -497,411 +76,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="MixExUnitRunConfigurationType" factoryName="Elixir Mix ExUnit">
-      <working-directory url="file://" />
-      <module-filters inherit-application-module-filters="true" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bed3aa74-dda3-41c2-8a6d-76c1985a34c7" name="Default" comment="" />
-      <created>1569275175055</created>
+      <changelist id="d803bfb6-ebbb-48b0-be26-adddd7b279c6" name="Default Changelist" comment="" />
+      <created>1569412621081</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569275175055</updated>
-      <workItem from="1569275177083" duration="10066000" />
-      <workItem from="1569361461167" duration="13287000" />
+      <updated>1569412621081</updated>
+      <workItem from="1569412624837" duration="210000" />
+      <workItem from="1569412875467" duration="79000" />
+      <workItem from="1569413000561" duration="4478000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29840000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="100" y="91" width="1424" height="821" extended-state="0" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.39917126" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3039074" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account/user.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/coherence/schemas.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/page_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/scriptdrop/company_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/authorized.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214648_create_addresses.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923231831_add_roles.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="65" lean-forward="true" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190924180812_add_user_roles.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account/user_role.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account/role.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/scriptdrop/account_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/coherence/registration/new.html.eex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/new.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mix.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_build/dev/lib/scriptdrop/priv/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/coherence/lib/coherence/controllers/registration_controller_base.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/coherence/lib/coherence/controllers/registration_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/address_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/abilities.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/router.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/views/shared_view.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/views/pharmacy_view.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/views/user_view.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/show.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/order/index.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="111" column="24" lean-forward="true" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/coherence/registration/form.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214744_create_couriers.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214907_create_orders.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214807_create_patients.exs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/seeds.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/edit.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="27" column="74" lean-forward="true" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company/courier.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/order.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="66" selection-start-line="10" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/company/pharmacy.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="36" selection-start-line="10" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop/account/user.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923214752_create_pharmacies.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="31" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20190923231832_create_coherence_user.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

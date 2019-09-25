@@ -31,14 +31,42 @@
         </div>
 
 
-            <div class="form-group">
+            <div class="form-group pharmacy_list">
               <%= label f, :pharmacy, class: "control-label" %>
               <%= select f, :pharmacy_id, @pharmacies, class: "form-control" %>
-              <%= error_tag f, :email %>
+              <%= error_tag f, :pharmacy_id %>
             </div>
+
+                        <div class="form-group courier_list" style="display:none">
+                          <%= label f, :courier, class: "control-label" %>
+                          <%= select f, :courier_id, @couriers, class: "form-control" %>
+                          <%= error_tag f, :courier_id %>
+                        </div>
 
 
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+<script>
+console.log("hello")
+$("#user_roles_pharmacist").change(function() {
+    console.log("changed")
+    if ($("#user_roles_pharmacist").is(':checked')) {
+                $('.courier_list').hide()
+                console.log("hide couriers")
+                $('.pharmacy_list').show()
+        }
+        }
+    )
+
+    $("#user_roles_courier").change(function() {
+        console.log("changed")
+        if ($("#user_roles_courier").is(':checked')) {
+            $('.pharmacy_list').hide()
+            console.log("hide pharmacies")
+            $('.courier_list').show()
+            }
+        }
+        )
+</script>
