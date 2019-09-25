@@ -42,6 +42,7 @@ config :coherence,
     "email",
     "name",
     "password",
+    "roles",
     "current_password",
     "password_confirmation"
   ],

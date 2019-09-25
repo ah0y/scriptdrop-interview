@@ -2,10 +2,11 @@ defmodule ScriptdropWeb.UserController do
   use ScriptdropWeb, :controller
 
   import Ecto.Query
-
+  alias Scriptdrop.Account
   alias Scriptdrop.Coherence.User
-  plug :authorize_resource, model: Scriptdrop.Coherence.User
-  use ScriptdropWeb.ControllerAuthorization
+  alias Scriptdrop.Company
+  #  plug :authorize_resource, model: Scriptdrop.Coherence.User
+  #  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     users = Account.list_users()
@@ -29,45 +30,22 @@ defmodule ScriptdropWeb.UserController do
   end
 
   def show(conn, %{"id" => id}) do
-    user =
-      Account.get_user!(id)
-      |> Metro.Repo.preload(:checkouts)
-    checkouts = Enum.reduce(
-      user.checkouts,
-      %{:checked_in => [], :checked_out => [], :waitlist => [], :transit => [], :pickup => []},
-      fn c, checkouts ->
-        cond do
-          c.checkin_date != nil -> Map.update(checkouts, :checked_in, c, &[c | &1])
-
-          c.checkout_date != nil -> Map.update(checkouts, :checked_out, c, &[c | &1])
-
-          c.copy_id == nil ->
-            c = Metro.Repo.preload(c, :waitlists)
-            Map.update(checkouts, :waitlist, c, &[c | &1])
-          true ->
-            c = Metro.Repo.preload(c, [:transit])
-            if c.transit.actual_arrival != nil do
-              c = Metro.Repo.preload(c,  :reservation)
-              Map.update(checkouts, :pickup, c, &[c | &1])
-            else
-              Map.update(checkouts, :transit, c, &[c | &1])
-            end
-        end
-      end
-    )
+    user = Account.get_user!(id)
 
     render(
       conn,
       "show.html",
-      user: user,
-      checkouts: checkouts
+      user: user
     )
   end
 
   def edit(conn, %{"id" => id}) do
     user = Account.get_user!(id)
+    pharmacies = Company.load_pharmacies()
+    couriers = Company.load_couriers()
     changeset = Account.change_user(user)
-    render(conn, "edit.html", user: user, changeset: changeset)
+#    require IEx; IEx.pry()
+    render(conn, "edit.html", user: user, changeset: changeset, pharmacies: pharmacies, couriers: couriers)
   end
 
   def update(conn, %{"id" => id, "user" => user_params}) do
@@ -78,7 +56,9 @@ defmodule ScriptdropWeb.UserController do
         |> put_flash(:info, "User updated successfully.")
         |> redirect(to: Routes.user_path(conn, :show, user))
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", user: user, changeset: changeset)
+        pharmacies = Company.load_pharmacies()
+        couriers = Company.load_couriers()
+        render(conn, "edit.html", user: user, changeset: changeset, pharmacies: pharmacies, couriers: couriers)
     end
   end
 

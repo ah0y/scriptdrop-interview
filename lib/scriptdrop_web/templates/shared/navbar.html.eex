@@ -2,7 +2,7 @@
             <div class="breadcrumb text-right">
                <%= link "orders", to: Routes.order_path(@conn, :index), class: "ml-auto", style: "padding-right: 7px;" %>
                <%= if Coherence.current_user_name(@conn) do %>
-                         <%= if @conn.assigns.current_user.is_pharmacy? do %>
+                         <%= if @conn.assigns.current_user.roles == "pharmacy" do %>
                                   <a class="dropdown-toggle" role="button" data-toggle="dropdown">
                                       pharmacy
                                   </a>

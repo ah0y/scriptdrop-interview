@@ -4,8 +4,8 @@ defmodule ScriptdropWeb.AddressController do
   alias Scriptdrop.Location
   alias Scriptdrop.Location.Address
 
-  plug :authorize_resource, model: Checkout
-  use ScriptdropWeb.ControllerAuthorization
+#  plug :authorize_resource, model: Address
+#  use ScriptdropWeb.ControllerAuthorization
 
 
   def index(conn, _params) do

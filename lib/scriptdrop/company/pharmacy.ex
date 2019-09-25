@@ -1,6 +1,7 @@
 defmodule Scriptdrop.Company.Pharmacy do
   use Ecto.Schema
   import Ecto.Changeset
+  import Ecto.Query
 
   schema "pharmacies" do
     field :name, :string
@@ -18,5 +19,9 @@ defmodule Scriptdrop.Company.Pharmacy do
     pharmacy
     |> cast(attrs, [:name, :address_id, :courier_id])
     |> validate_required([:name, :address_id, :courier_id])
+  end
+
+  def pharmacy_and_ids(query) do
+    from p in query, select: %{name: p.name, id: p.id}
   end
 end

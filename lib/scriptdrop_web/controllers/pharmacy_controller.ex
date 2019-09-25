@@ -4,8 +4,8 @@ defmodule ScriptdropWeb.PharmacyController do
   alias Scriptdrop.Company
   alias Scriptdrop.Company.Pharmacy
 
-  plug :authorize_resource, model: Pharmacy
-  use ScriptdropWeb.ControllerAuthorization
+#  plug :authorize_resource, model: Pharmacy
+#  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     pharmacies = Company.list_pharmacies()

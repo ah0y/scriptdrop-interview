@@ -4,8 +4,8 @@ defmodule ScriptdropWeb.CourierController do
   alias Scriptdrop.Company
   alias Scriptdrop.Company.Courier
 
-  plug :authorize_resource, model: Courier
-  use ScriptdropWeb.ControllerAuthorization
+#  plug :authorize_resource, model: Courier
+#  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     couriers = Company.list_couriers()

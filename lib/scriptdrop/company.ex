@@ -197,4 +197,40 @@ defmodule Scriptdrop.Company do
   def change_pharmacy(%Pharmacy{} = pharmacy) do
     Pharmacy.changeset(pharmacy, %{})
   end
+
+  @doc """
+  Loads a list of courier name and courier ids.
+
+  ## Examples
+
+      iex> load_couriers()
+      [%Courier{}, ...]
+
+  """
+  def load_couriers do
+    query =
+      Courier
+      |> Courier.courier_and_ids
+    couriers = Repo.all query
+    couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
+  end
+
+
+  @doc """
+  Loads a list of pharmacy name and pharmacy ids.
+
+  ## Examples
+
+      iex> load_pharmacies()
+      [%Pharmacy{}, ...]
+
+  """
+  def load_pharmacies do
+    query =
+      Pharmacy
+      |> Pharmacy.pharmacy_and_ids
+    pharmacies = Repo.all query
+    pharmacies = Enum.map(pharmacies, fn %{id: key, name: value} -> {:"#{value}", key} end)
+
+  end
 end

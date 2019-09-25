@@ -13,39 +13,26 @@
 
 
 Scriptdrop.Repo.insert!(
-  %Scriptdrop.Company.Pharmacy{
-    name: "Better Rx",
-    address: %Scriptdrop.Location.Address{
-      street: "1275 kinnear road",
-      city: "columbus",
-      state: "oh",
-      zip: 43215
-    }
-  }
-)
 
-Scriptdrop.Repo.insert!(
-  %Scriptdrop.Company.Pharmacy{
-    name: "Best Rx",
+  %Scriptdrop.Company.Courier{
+    name: "Previous Day Delivery",
     address: %Scriptdrop.Location.Address{
-      street: "123 Austin St",
-      city: "Austin",
-      state: "tx",
-      zip: 78702
-    }
-  }
-)
-
-
-Scriptdrop.Repo.insert!(
-  %Scriptdrop.Company.Pharmacy{
-    name: "Drugs R Us",
-    address: %Scriptdrop.Location.Address{
-      street: "4925 LA Ave",
+      street: "7433 LA Ct",
       city: "los angeles",
       state: "ca",
       zip: 90056
-    }
+    },
+    pharmacies: [
+      %Scriptdrop.Company.Pharmacy{
+        name: "Drugs R Us",
+        address: %Scriptdrop.Location.Address{
+          street: "4925 LA Ave",
+          city: "los angeles",
+          state: "ca",
+          zip: 90056
+        }
+      }
+    ]
   }
 )
 
@@ -58,38 +45,31 @@ Scriptdrop.Repo.insert!(
       city: "Trenton",
       state: "NJ",
       zip: 08536
-    }
+    },
+    pharmacies: [
+      %Scriptdrop.Company.Pharmacy{
+        name: "Best Rx",
+        address: %Scriptdrop.Location.Address{
+          street: "123 Austin St",
+          city: "Austin",
+          state: "tx",
+          zip: 78702
+        }
+      },
+
+      %Scriptdrop.Company.Pharmacy{
+        name: "Better Rx",
+        address: %Scriptdrop.Location.Address{
+          street: "1275 kinnear road",
+          city: "columbus",
+          state: "oh",
+          zip: 43215
+        }
+      }
+    ]
   }
 )
 
-
-Scriptdrop.Repo.insert!(
-  %Scriptdrop.Company.Courier{
-    name: "Previous Day Delivery",
-    address: %Scriptdrop.Location.Address{
-      street: "7433 LA Ct",
-      city: "los angeles",
-      state: "ca",
-      zip: 90056
-    }
-  }
-)
-
-#Scriptdrop.Repo.insert!(
-#  %Scriptdrop.Coherence.User{
-#    name: "abe",
-#    email: "abe200@gmail.com",
-#    password: "password",
-#    password_hash: "$2b$12$yPfPx1nWGe3yb/UfLfPy.Op9REGVuZbVze85heRgsu9uAVj7/MTUK",
-##    pharmacy_id: 1
-#        roles: [
-#      %Scriptdrop.Account.Role{
-##        name: "pharmacy",
-#        pharmacy_id: 1
-#      }
-#    ]
-#  }
-#)
 
 #import Ecto.Changeset
 #
@@ -100,21 +80,12 @@ Scriptdrop.Repo.insert!(
 #    email: "abe03@gmail.com",
 #    password: "password",
 #    password_hash: "$2b$12$yPfPx1nWGe3yb/UfLfPy.Op9REGVuZbVze85heRgsu9uAVj7/MTUK",
-#    pharmacy_id: 1
-#    #   roles: [
-#    #      %Scriptdrop.Account.Role{
-#    #        name: "pharmacy",
-#    #        pharmacy_id: 1
-#    #      }
-#    #    ]
+#    roles: "courier"
 #  }
 #)
 #
-#changeset = model
-#            |> Ecto.Changeset.change()
-#            |> Ecto.Changeset.put_assoc(
-#                 :roles,
-#                 [%Scriptdrop.Account.Role{name: "so-so example!", pharmacy_id: 1} | model.roles]
-#               )
 #
-#               break! Scriptdrop.Account.Role.changeset/2
+#break! Scriptdrop.Coherence.User.changeset / 2
+
+
+#    model |> cast(params, [:roles, :name, :email] ++ coherence_fields()) |> Ecto.Changeset.validate_subset(:roles, ["pharmacist", "courier"])

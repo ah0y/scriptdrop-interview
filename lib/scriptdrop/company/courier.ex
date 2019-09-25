@@ -1,6 +1,7 @@
 defmodule Scriptdrop.Company.Courier do
   use Ecto.Schema
   import Ecto.Changeset
+  import Ecto.Query
 
   schema "couriers" do
     field :name, :string
@@ -18,5 +19,9 @@ defmodule Scriptdrop.Company.Courier do
     courier
     |> cast(attrs, [:name, :address_id])
     |> validate_required([:name, :address_id])
+  end
+
+  def courier_and_ids(query) do
+    from c in query, select: %{name: c.name, id: c.id}
   end
 end

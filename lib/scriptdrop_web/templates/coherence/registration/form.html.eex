@@ -46,6 +46,19 @@
     <%= error_tag f, :password_confirmation %>
   </div>
 
+    <div class="form-group">
+       <%= label f, :roles, class: "control-label" %>
+      <div style="display: inline-block;">
+      <%= label f, :pharmacist, "pharmacist" %>
+      <%= radio_button(f, :roles, "pharmacist", checked: true, class: "form-control") %>
+      </div>
+      <div style="display: inline-block;">
+      <%= label f, :courier, "courier" %>
+      <%= radio_button(f, :roles, "courier", class: "form-control") %>
+      </div>
+      <%= error_tag f, :roles %>
+    </div>
+
   <div class="form-group">
     <%= submit @label, class: "btn btn-primary" %>
     <%= link dgettext("coherence", "Cancel"), to: Coherence.Config.logged_out_url("/"), class: "btn" %>

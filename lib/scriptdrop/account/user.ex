@@ -3,36 +3,41 @@ defmodule Scriptdrop.Coherence.User do
   use Ecto.Schema
   use Coherence.Schema
 
-  alias Scriptdrop.Account.Role
+  import Ecto.Changeset
 
   schema "users" do
     field(:name, :string)
     field(:email, :string)
+    field(:roles, :string)
+
+    belongs_to :pharmacy, Scriptdrop.Company.Pharmacy, foreign_key: :pharmacy_id
+    belongs_to :courier, Scriptdrop.Company.Courier, foreign_key: :courier_id
+
     coherence_schema()
 
-    many_to_many(
-      :roles,
-      Scriptdrop.Account.Role,
-      join_through: Scriptdrop.Account.UserRole,
-      join_keys: [
-        user_id: :id,
-        role_id: :id
-      ],
-      on_replace: :delete
-    )
-
     timestamps()
+  end
+
+  def courier_registration_changeset(user_or_changeset, attrs) do
+    user_or_changeset
+    |> changeset(attrs)
+    |> change(%{roles: "courier"})
+  end
+
+  def pharmacist_registration_changeset(user_or_changeset, attrs) do
+    user_or_changeset
+    |> changeset(attrs)
+    |> change(%{roles: "pharmacist"})
   end
 
   @doc false
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
   def changeset(model, params \\ %{}) do
     model
-    |> cast(params, [:name, :email] ++ coherence_fields())
-    |> validate_required([:name, :email])
+    |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
+    |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
+    |> validate_required([:roles, :name, :email])
     |> validate_format(:email, ~r/@/)
-    |> Ecto.Changeset.change()
-    |> Ecto.Changeset.put_assoc(:roles, [%Scriptdrop.Account.Role{name: "so-so example!", pharmacy_id: 1} | model.roles])
     |> unique_constraint(:email)
     |> validate_coherence(params)
   end

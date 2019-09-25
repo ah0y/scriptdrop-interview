@@ -3,9 +3,9 @@ defmodule ScriptdropWeb.OrderController do
 
   alias Scriptdrop.Customer
   alias Scriptdrop.Customer.Order
-
-  plug :authorize_resource, model: Order
-  use ScriptdropWeb.ControllerAuthorization
+#
+#  plug :authorize_resource, model: Order
+#  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     orders = Customer.list_orders()

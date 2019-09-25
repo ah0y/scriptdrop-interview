@@ -1,0 +1,44 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+    <div class="form-group">
+      <%= label f, :email, class: "control-label" %>
+      <%= text_input f, :email, class: "form-control" %>
+      <%= error_tag f, :email %>
+    </div>
+
+        <div class="form-group">
+           <%= label f, :roles, class: "control-label" %>
+          <div style="display: inline-block;">
+          <%= label f, :pharmacist, "pharmacist" %>
+          <%= radio_button(f, :roles, "pharmacist", checked: true, class: "form-control") %>
+          </div>
+          <div style="display: inline-block;">
+          <%= label f, :courier, "courier" %>
+          <%= radio_button(f, :roles, "courier", class: "form-control") %>
+          </div>
+          <%= error_tag f, :roles %>
+        </div>
+
+
+            <div class="form-group">
+              <%= label f, :pharmacy, class: "control-label" %>
+              <%= select f, :pharmacy_id, @pharmacies, class: "form-control" %>
+              <%= error_tag f, :email %>
+            </div>
+
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -3,7 +3,10 @@ defmodule Scriptdrop.Repo.Migrations.CreateCoherenceUser do
   def change do
     create table(:users) do
 
-      add :role_id, references("roles")
+      add :roles, :string
+      add :courier_id, references(:couriers, on_delete: :nothing)
+      add :pharmacy_id, references(:pharmacies, on_delete: :nothing)
+
       add :name, :string
       add :email, :string
       # authenticatable
@@ -26,6 +29,7 @@ defmodule Scriptdrop.Repo.Migrations.CreateCoherenceUser do
       timestamps()
     end
     create unique_index(:users, [:email])
-
+    create index(:users, [:courier_id])
+    create index(:users, [:pharmacy_id])
   end
 end
