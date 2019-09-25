@@ -18,7 +18,7 @@ defmodule ScriptdropWeb.OrderController do
   end
 
   def create(conn, %{"order" => order_params}) do
-    require IEx; IEx.pry()
+#    require IEx; IEx.pry()
     case Customer.create_order(order_params) do
       {:ok, order} ->
         conn
@@ -36,7 +36,7 @@ defmodule ScriptdropWeb.OrderController do
   end
 
   def edit(conn, %{"id" => id}) do
-    order = Customer.get_order!(id)
+    order = Customer.get_order!(id) |> Scriptdrop.Repo.preload([{:patient, :address}])
     changeset = Customer.change_order(order)
     render(conn, "edit.html", order: order, changeset: changeset)
   end

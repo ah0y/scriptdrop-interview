@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d803bfb6-ebbb-48b0-be26-adddd7b279c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/order/form.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/order/form.html.eex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,20 +40,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order_controller.ex" pinned="false" current-in-tab="false">
+      <file leaf-file-name="order_controller.ex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="94">
+              <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="order.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/order.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+            <state relative-caret-position="75">
+              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -65,8 +61,8 @@
       <file leaf-file-name="patient.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="260">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -111,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>role</find>
       <find>teacher</find>
       <find>Accounts</find>
       <find>student</find>
@@ -141,6 +136,7 @@
       <find>pharmacy</find>
       <find>private</find>
       <find>f</find>
+      <find>edit</find>
     </findStrings>
     <replaceStrings>
       <replace>ScriptdropWeb.ControllerAuthorization</replace>
@@ -178,9 +174,9 @@
         <option value="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" />
         <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" />
         <option value="$PROJECT_DIR$/lib/scriptdrop_web/templates/order/form.html.eex" />
+        <option value="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" />
         <option value="$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex" />
         <option value="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" />
-        <option value="$PROJECT_DIR$/lib/scriptdrop/customer/order.ex" />
       </list>
     </option>
   </component>
@@ -197,7 +193,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="69" />
-    <option name="y" value="125" />
+    <option name="y" value="124" />
     <option name="width" value="1521" />
     <option name="height" value="821" />
   </component>
@@ -373,10 +369,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16010000" />
+    <option name="totallyTimeSpent" value="16265000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="125" width="1521" height="821" extended-state="0" />
+    <frame x="69" y="124" width="1521" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -722,22 +718,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/patient.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="260">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/scriptdrop/customer/order.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
         </state>
       </provider>
     </entry>
