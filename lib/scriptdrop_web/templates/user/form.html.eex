@@ -1,90 +1,124 @@
 <%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
-  <% end %>
+<%= if @changeset.action do %>
+<div class="alert alert-danger">
+    <p>Oops, something went wrong! Please check the errors below.</p>
+</div>
+<% end %>
 
-  <div class="form-group">
+<div class="form-group">
     <%= label f, :name, class: "control-label" %>
     <%= text_input f, :name, class: "form-control" %>
     <%= error_tag f, :name %>
-  </div>
+</div>
 
-    <div class="form-group">
-      <%= label f, :email, class: "control-label" %>
-      <%= text_input f, :email, class: "form-control" %>
-      <%= error_tag f, :email %>
+<div class="form-group">
+    <%= label f, :email, class: "control-label" %>
+    <%= text_input f, :email, class: "form-control" %>
+    <%= error_tag f, :email %>
+</div>
+
+<div class="form-group">
+    <%= label f, :roles, class: "control-label" %>
+    <div style="display: inline-block;">
+        <%= label f, :pharmacist, "pharmacist" %>
+        <%= radio_button(f, :roles, "pharmacist", checked: true, class: "form-control") %>
     </div>
+    <div style="display: inline-block;">
+        <%= label f, :courier, "courier" %>
+        <%= radio_button(f, :roles, "courier", class: "form-control") %>
+    </div>
+    <%= error_tag f, :roles %>
+</div>
 
-        <div class="form-group">
-           <%= label f, :roles, class: "control-label" %>
-          <div style="display: inline-block;">
-          <%= label f, :pharmacist, "pharmacist" %>
-          <%= radio_button(f, :roles, "pharmacist", checked: true, class: "form-control") %>
-          </div>
-          <div style="display: inline-block;">
-          <%= label f, :courier, "courier" %>
-          <%= radio_button(f, :roles, "courier", class: "form-control") %>
-          </div>
-          <%= error_tag f, :roles %>
-        </div>
+<%= cond do   %>
 
+<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "pharmacist" -> %>
 
-                         <%= if @conn.private.plug_session["current_user"].roles == "pharmacist" do %>
+<div class="form-group pharmacy_list">
+    <%= label f, :pharmacy, class: "control-label" %>
+    <%= select f, :pharmacy_id,  ["": ""] ++ @pharmacies, class: "form-control", selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= error_tag f, :pharmacy_id %>
+</div>
 
-            <div class="form-group pharmacy_list">
-              <%= label f, :pharmacy, class: "control-label" %>
-              <%= select f, :pharmacy_id, @pharmacies ++ ["": ""], class: "form-control" %>
-              <%= error_tag f, :pharmacy_id %>
-            </div>
+<div class="form-group courier_list", style="display:none">
+    <%= label f, :courier, class: "control-label" %>
+    <%= select f, :courier_id,  ["": ""] ++ @couriers, class: "form-control" , selected: @conn.private.plug_session["current_user"].courier_id || ""%>
+    <%= error_tag f, :courier_id %>
+</div>
 
-                                    <div class="form-group courier_list" style="display:none">
-                                      <%= label f, :courier, class: "control-label" %>
-                                      <%= select f, :courier_id, @couriers, class: "form-control" %>
-                                      <%= error_tag f, :courier_id %>
-                                    </div>
-                                        <% else %>
+<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "courier" -> %>
 
-
-                        <div class="form-group courier_list">
-                          <%= label f, :courier, class: "control-label" %>
-                          <%= select f, :courier_id, @couriers ++ ["": ""], class: "form-control" %>
-                          <%= error_tag f, :courier_id %>
-                        </div>
+<div class="form-group courier_list">
+    <%= label f, :courier, class: "control-label" %>
+    <%= select f, :courier_id,["": ""] ++ @couriers, class: "form-control", selected: @conn.private.plug_session["current_user"].courier_id || ""%>
+    <%= error_tag f, :courier_id %>
+</div>
 
 
-                                    <div class="form-group pharmacy_list" style="display:none">
-                                      <%= label f, :pharmacy, class: "control-label" %>
-                                      <%= select f, :pharmacy_id, @pharmacies, class: "form-control" %>
-                                      <%= error_tag f, :pharmacy_id %>
-                                    </div>
-                         <% end %>
+<div class="form-group pharmacy_list" style="display:none">
+    <%= label f, :pharmacy, class: "control-label" %>
+    <%= select f, :pharmacy_id, ["": ""] ++ @pharmacies , class: "form-control",selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= error_tag f, :pharmacy_id %>
+</div>
 
 
-  <div class="form-group">
+
+<%= @conn.assigns.current_user.roles == "pharmacist" ->  %>
+
+<div class="form-group pharmacy_list">
+    <%= label f, :pharmacy, class: "control-label" %>
+    <%= select f, :pharmacy_id,  ["": ""] ++ @pharmacies , class: "form-control", selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= error_tag f, :pharmacy_id %>
+</div>
+
+<div class="form-group courier_list" style="display:none">
+    <%= label f, :courier, class: "control-label" %>
+    <%= select f, :courier_id, ["": ""] ++ @couriers, class: "form-control", selected: @conn.private.plug_session["current_user"].courier_id || "" %>
+    <%= error_tag f, :courier_id %>
+</div>
+
+
+<%= true -> %>
+
+<div class="form-group courier_list">
+    <%= label f, :courier, class: "control-label" %>
+    <%= select f, :courier_id, ["": ""] ++ @couriers , class: "form-control", selected: @conn.private.plug_session["current_user"].courier_id || "" %>
+    <%= error_tag f, :courier_id %>
+</div>
+
+
+<div class="form-group pharmacy_list" style="display:none">
+    <%= label f, :pharmacy, class: "control-label" %>
+    <%= select f, :pharmacy_id, ["": ""] ++ @pharmacies  , class: "form-control", selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= error_tag f, :pharmacy_id %>
+</div>
+
+<% end %>
+
+
+<div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
-  </div>
+</div>
 <% end %>
 <script>
-console.log("hello")
-$("#user_roles_pharmacist").change(function() {
-    console.log("changed")
-    if ($("#user_roles_pharmacist").is(':checked')) {
+    console.log("hello")
+    $("#user_roles_pharmacist").change(function () {
+            console.log("changed")
+            if ($("#user_roles_pharmacist").is(':checked')) {
                 $('.courier_list').hide()
                 console.log("hide couriers")
                 $('.pharmacy_list').show()
-        }
+            }
         }
     )
 
-    $("#user_roles_courier").change(function() {
-        console.log("changed")
-        if ($("#user_roles_courier").is(':checked')) {
-            $('.pharmacy_list').hide()
-            console.log("hide pharmacies")
-            $('.courier_list').show()
+    $("#user_roles_courier").change(function () {
+            console.log("changed")
+            if ($("#user_roles_courier").is(':checked')) {
+                $('.pharmacy_list').hide()
+                console.log("hide pharmacies")
+                $('.courier_list').show()
             }
         }
-        )
+    )
 </script>

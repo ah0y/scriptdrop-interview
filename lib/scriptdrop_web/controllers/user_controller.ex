@@ -45,7 +45,7 @@ defmodule ScriptdropWeb.UserController do
     pharmacies = Company.load_pharmacies()
     couriers = Company.load_couriers()
     changeset = Account.change_user(user)
-    #    require IEx; IEx.pry()
+#        require IEx; IEx.pry()
     render(conn, "edit.html", user: user, changeset: changeset, pharmacies: pharmacies, couriers: couriers)
   end
 

@@ -18,21 +18,9 @@ defmodule Scriptdrop.Coherence.User do
     timestamps()
   end
 
-  def courier_registration_changeset(user_or_changeset, attrs) do
-    user_or_changeset
-    |> changeset(attrs)
-    |> change(%{roles: "courier"})
-  end
-
-  def pharmacist_registration_changeset(user_or_changeset, attrs) do
-    user_or_changeset
-    |> changeset(attrs)
-    |> change(%{roles: "pharmacist"})
-  end
-
     @doc false
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
-  def changeset(model, %{"roles" => roles} = params) when roles == "pharmacist" do
+  def changeset(model, %{"roles" => roles, "pharmacy_id" => pharmacy_id} = params) when roles == "pharmacist" and pharmacy_id != ""  do
     model
     |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
     |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
@@ -46,7 +34,7 @@ defmodule Scriptdrop.Coherence.User do
 
   @doc false
   @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
-  def changeset(model, %{"roles" => roles} = params) when roles == "courier" do
+  def changeset(model, %{"roles" => roles, "courier_id" => courier_id} = params) when roles == "courier" and courier_id != "" do
     model
     |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
     |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
@@ -65,9 +53,13 @@ defmodule Scriptdrop.Coherence.User do
     |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
     |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
     |> validate_required([:roles, :name, :email])
+    |> put_change(:pharmacy_id, nil)
+    |> put_change(:courier_id, nil)
     |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
     |> validate_coherence(params)
+
+#    require IEx; IEx.pry()
   end
 
   @doc false
