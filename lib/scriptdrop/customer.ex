@@ -127,7 +127,7 @@ defmodule Scriptdrop.Customer do
 
   """
   def list_pharmacy_orders(pharmacy_id) do
-    Repo.get_by(Order, pharmacy_id: pharmacy_id) || []
+    from(o in Order, where: o.pharmacy_id == ^pharmacy_id, group_by: [o.id, o.pickup_date]) |> Repo.all || []
   end
 
   @doc """
@@ -140,7 +140,7 @@ defmodule Scriptdrop.Customer do
 
   """
   def list_courier_orders(courier_id) do
-    Repo.get_by(Order, courier_id: courier_id) || []
+    from(o in Order, where: o.courier_id == ^courier_id, group_by: [o.id, o.pickup_date]) |> Repo.all || []
   end
   @doc """
   Gets a single order.

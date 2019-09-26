@@ -19,7 +19,7 @@ defmodule Scriptdrop.Company.Courier do
     courier
     |> cast(attrs, [:name, :address_id])
     |> cast_assoc(:address, required: true)
-    |> validate_required([:name, :address_id])
+    |> validate_required([:name])
   end
 
   def courier_and_ids(query) do

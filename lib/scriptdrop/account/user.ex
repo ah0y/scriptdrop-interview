@@ -58,8 +58,6 @@ defmodule Scriptdrop.Coherence.User do
     |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
     |> validate_coherence(params)
-
-#    require IEx; IEx.pry()
   end
 
   @doc false

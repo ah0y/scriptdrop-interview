@@ -28,6 +28,18 @@
                     <%= error_tag a, :zip %>
                  </div>
                <% end %>
+               
+        <div class="form-group">
+          <%= label f, :courier_id, class: "control-label" %>
+          <input id="courierList" list="pharmacy_courier_id" name="pharmacy[courier_id]" class="form-control" />
+          <datalist id="pharmacy_courier_id">
+          <%= for courier <- @couriers do %>
+           <option value=<%=courier.id%>><%=courier.name%></option>
+           <% end%>
+          </datalist>
+         <%= error_tag f, :courier_id %>
+         <%= link "Couriers", to: "/courier/", target: "_blank", id: "pharmacy_courier_link", style: "display: none;"   %>
+        </div>         
 
   <div>
     <%= submit "Save" %>

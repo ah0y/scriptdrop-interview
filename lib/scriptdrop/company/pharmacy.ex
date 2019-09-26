@@ -19,7 +19,7 @@ defmodule Scriptdrop.Company.Pharmacy do
     pharmacy
     |> cast(attrs, [:name, :address_id, :courier_id])
     |> cast_assoc(:address, required: true)
-    |> validate_required([:name, :address_id])
+    |> validate_required([:name])
   end
 
   def pharmacy_and_ids(query) do

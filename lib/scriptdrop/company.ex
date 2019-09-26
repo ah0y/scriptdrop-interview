@@ -208,11 +208,30 @@ defmodule Scriptdrop.Company do
 
   """
   def load_couriers do
+    #todo refactor this bad code lol
     query =
       Courier
       |> Courier.courier_and_ids
     couriers = Repo.all query
     couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
+  end
+
+  @doc """
+  Loads a list of courier name and courier ids for a datalist.
+
+  ## Examples
+
+      iex> load_couriers_datalist()
+      [%Courier{}, ...]
+
+  """
+  def load_couriers_datalist do
+    #todo refactor this bad code lol
+    query =
+      Courier
+      |> Courier.courier_and_ids
+    couriers = Repo.all query
+#    couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
   end
 
 
@@ -226,6 +245,7 @@ defmodule Scriptdrop.Company do
 
   """
   def load_pharmacies do
+    #todo refactor this bad code lol whyd i make it harder than it needed to be
     query =
       Pharmacy
       |> Pharmacy.pharmacy_and_ids

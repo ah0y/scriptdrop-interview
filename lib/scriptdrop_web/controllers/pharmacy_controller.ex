@@ -13,8 +13,9 @@ defmodule ScriptdropWeb.PharmacyController do
   end
 
   def new(conn, _params) do
+    couriers = Company.load_couriers_datalist()
     changeset = Company.change_pharmacy(%Pharmacy{})
-    render(conn, "new.html", changeset: changeset)
+    render(conn, "new.html", changeset: changeset, couriers: couriers)
   end
 
   def create(conn, %{"pharmacy" => pharmacy_params}) do
@@ -25,7 +26,8 @@ defmodule ScriptdropWeb.PharmacyController do
         |> redirect(to: Routes.pharmacy_path(conn, :show, pharmacy))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        couriers = Company.load_couriers_datalist()
+        render(conn, "new.html", changeset: changeset, couriers: couriers)
     end
   end
 
@@ -37,21 +39,21 @@ defmodule ScriptdropWeb.PharmacyController do
   def edit(conn, %{"id" => id}) do
     pharmacy = Company.get_pharmacy!(id)
                |> Scriptdrop.Repo.preload(:address)
+    couriers = Company.load_couriers_datalist()
     changeset = Company.change_pharmacy(pharmacy)
-    render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset)
+    render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset, couriers: couriers)
   end
 
   def update(conn, %{"id" => id, "pharmacy" => pharmacy_params}) do
     pharmacy = Company.get_pharmacy!(id)
-
     case Company.update_pharmacy(pharmacy, pharmacy_params) do
       {:ok, pharmacy} ->
         conn
         |> put_flash(:info, "Pharmacy updated successfully.")
         |> redirect(to: Routes.pharmacy_path(conn, :show, pharmacy))
-
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset)
+        couriers = Company.load_couriers_datalist()
+        render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset, couriers: couriers)
     end
   end
 

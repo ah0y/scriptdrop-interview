@@ -31,8 +31,6 @@ defmodule ScriptdropWeb.UserController do
 
   def show(conn, %{"id" => id}) do
     user = Account.get_user!(id)
-#    require IEx;
-#    IEx.pry()
     render(
       conn,
       "show.html",

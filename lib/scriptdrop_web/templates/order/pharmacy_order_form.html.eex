@@ -41,7 +41,7 @@
   <%= error_tag f, :delivered %>
 
   <%= label f, :pickup_date %>
-  <%= datetime_select f, :pickup_date %>
+  <%= datetime_select f, :pickup_date, default: {{ NaiveDateTime.utc_now.year, NaiveDateTime.utc_now.month, NaiveDateTime.utc_now.day}, {00, 00, 00}}%>
   <%= error_tag f, :pickup_date %>
 
   <div>
