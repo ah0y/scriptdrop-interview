@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d803bfb6-ebbb-48b0-be26-adddd7b279c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/prod.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/prod.exs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,39 +13,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="customer_test.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/scriptdrop/customer_test.exs">
+      <file leaf-file-name="prod.exs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/prod.exs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="110" column="22" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="184">
-                <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mix.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mix.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order_controller_test.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/scriptdrop_web/controllers/order_controller_test.exs">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -57,12 +30,12 @@
       <find>author</find>
       <find>list_</find>
       <find>&lt;td&gt;</find>
-      <find>new courier</find>
+      <find />
       <find>edit</find>
       <find>datalist</find>
-      <find>belongs_to :address</find>
+      <find />
       <find>assoc</find>
-      <find>describe</find>
+      <find />
       <find>courier_fixture</find>
       <find>get_courier</find>
       <find>get_phar</find>
@@ -92,7 +65,7 @@
       <replace>Account</replace>
       <replace>pharmacy</replace>
       <replace>a</replace>
-      <replace>:update, @order</replace>
+      <replace />
       <replace>_order_form</replace>
       <replace>load_datalist</replace>
       <replace>load_couriers_datalist</replace>
@@ -153,6 +126,8 @@
         <option value="$PROJECT_DIR$/test/scriptdrop_web/controllers/patient_controller_test.exs" />
         <option value="$PROJECT_DIR$/test/scriptdrop_web/controllers/pharmacy_controller_test.exs" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/config/prod.exs" />
       </list>
     </option>
   </component>
@@ -168,8 +143,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
-    <option name="y" value="90" />
+    <option name="x" value="480" />
+    <option name="y" value="62" />
     <option name="width" value="1521" />
     <option name="height" value="821" />
   </component>
@@ -195,7 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="mix.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/mix.exs&#10;seeds&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/seeds.exs&#10;order&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;customer&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer.ex&#10;pharmacy_Cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;test.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/config/test.exs&#10;pharmacy.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;courier&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;test&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test&#10;navbar&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;app.html&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;order.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;router&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;csv_c&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/csv_controller.ex&#10;order.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;order/index&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/order/index.html.eex&#10;order_&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;phoenix.css&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/assets/css/phoenix.css&#10;app.css&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/assets/css/app.css&#10;navbar.html&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;pharmacy&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;pharmacy/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/pharmacy/form.html.eex&#10;order_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;courier_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/courier_controller.ex&#10;pharmacy_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;pharmacy.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;user_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/user_controller.ex&#10;user/edit&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/edit.html.eex&#10;navbar.h&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;user/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/form.html.eex&#10;shared&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared&#10;APP.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;pharmacy_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;csv_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/csv_controller.ex&#10;account_&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test/scriptdrop/account_test.exs&#10;controllers/&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers&#10;router.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;user.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/account/user.ex&#10;account_test&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test/scriptdrop/account_test.exs&#10;courier.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;order_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;app.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;company&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company.ex&#10;pharmacy_contr&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;template/pharmac&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/pharmacy&#10;app.ht&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;navbar.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;order_contr&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;courier.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;pharmacy_&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex" />
+    <property name="SearchEverywhereHistoryKey" value="user_soc&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/channels/user_socket.ex&#10;prod.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/config/prod.exs&#10;mix.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/mix.exs&#10;seeds&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/priv/repo/seeds.exs&#10;order&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;customer&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer.ex&#10;pharmacy_Cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;test.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/config/test.exs&#10;pharmacy.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;courier&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;test&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test&#10;navbar&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;app.html&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;order.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;router&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;csv_c&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/csv_controller.ex&#10;order.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/customer/order.ex&#10;order/index&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/order/index.html.eex&#10;order_&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;phoenix.css&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/assets/css/phoenix.css&#10;app.css&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/assets/css/app.css&#10;navbar.html&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;pharmacy&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;pharmacy/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/pharmacy/form.html.eex&#10;order_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;courier_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/courier_controller.ex&#10;pharmacy_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;pharmacy.ex&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/pharmacy.ex&#10;user_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/user_controller.ex&#10;user/edit&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/edit.html.eex&#10;navbar.h&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;user/form&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/user/form.html.eex&#10;shared&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared&#10;APP.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;pharmacy_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;csv_con&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/csv_controller.ex&#10;account_&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test/scriptdrop/account_test.exs&#10;controllers/&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers&#10;router.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/router.ex&#10;user.e&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/account/user.ex&#10;account_test&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/test/scriptdrop/account_test.exs&#10;courier.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company/courier.ex&#10;order_cont&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex&#10;app.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;company&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop/company.ex&#10;pharmacy_contr&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/pharmacy_controller.ex&#10;template/pharmac&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/pharmacy&#10;app.ht&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/layout/app.html.eex&#10;navbar.&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/templates/shared/navbar.html.eex&#10;order_contr&#9;FILE&#9;file:///Users/aberhamhaile/Downloads/code/scriptdrop/lib/scriptdrop_web/controllers/order_controller.ex" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -235,19 +210,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44459000" />
+    <option name="totallyTimeSpent" value="44763000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="90" width="1521" height="821" extended-state="0" />
-    <editor active="true" />
+    <frame x="480" y="62" width="1521" height="821" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4122682" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.3035835" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4122682" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.3035835" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -287,14 +261,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/log_authenticated.ex" />
-    <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/user/show.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/scriptdrop_web/templates/patient/form.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -616,10 +582,24 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="184">
-            <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <first_editor relative-caret-position="243">
+            <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/prod.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
