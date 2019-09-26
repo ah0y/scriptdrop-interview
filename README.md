@@ -9,6 +9,8 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
 
 ## Questions and Answers
 * What was the hardest part of the implementation?
@@ -18,7 +20,6 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 * How could we change the project to be more interesting?
     * Add something with Google maps or something to simulate the live delivery of an order.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
 
