@@ -42,6 +42,7 @@ defmodule ScriptdropWeb.Router do
 
     get "/", PageController, :index
     get "/csv", CsvController, :index
+    get "/export", CsvController, :export
     resources "/courier", CourierController
     resources "/pharmacy", PharmacyController
     resources "/order", OrderController
