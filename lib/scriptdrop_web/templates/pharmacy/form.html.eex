@@ -28,7 +28,7 @@
                     <%= error_tag a, :zip %>
                  </div>
                <% end %>
-               
+
         <div class="form-group">
           <%= label f, :courier_id, class: "control-label" %>
           <input id="courierList" list="pharmacy_courier_id" name="pharmacy[courier_id]" class="form-control" />
@@ -39,9 +39,31 @@
           </datalist>
          <%= error_tag f, :courier_id %>
          <%= link "Couriers", to: "/courier/", target: "_blank", id: "pharmacy_courier_link", style: "display: none;"   %>
-        </div>         
+        </div>
 
   <div>
     <%= submit "Save" %>
   </div>
 <% end %>
+
+
+<script>
+$("input[id='courierList']").on('input', function(e){
+   var $input = $(this);
+       val = $input.val();
+       list = $input.attr('list');
+       match = $('#'+list + ' option').filter(function() {
+           return ($(this).val() === val);
+       });
+
+    if(match.length > 0) {
+        // value is in list
+           $("#pharmacy_courier_link").attr("href", `/courier/${val}`)
+           $("#pharmacy_courier_link").show();
+    } else {
+        // value is not in list
+           $("#pharmacy_courier_link").hide()
+    }
+});
+
+</script>

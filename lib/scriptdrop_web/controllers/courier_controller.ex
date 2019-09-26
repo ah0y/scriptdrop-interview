@@ -4,8 +4,8 @@ defmodule ScriptdropWeb.CourierController do
   alias Scriptdrop.Company
   alias Scriptdrop.Company.Courier
 
-#  plug :authorize_resource, model: Courier
-#  use ScriptdropWeb.ControllerAuthorization
+  #  plug :authorize_resource, model: Courier
+  #  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     couriers = Company.list_couriers()
@@ -43,6 +43,7 @@ defmodule ScriptdropWeb.CourierController do
 
   def update(conn, %{"id" => id, "courier" => courier_params}) do
     courier = Company.get_courier!(id)
+              |> Scriptdrop.Repo.preload(:address)
 
     case Company.update_courier(courier, courier_params) do
       {:ok, courier} ->

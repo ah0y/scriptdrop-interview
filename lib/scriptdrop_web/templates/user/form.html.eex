@@ -32,7 +32,7 @@
 
 <%= cond do   %>
 
-<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "pharmacist" -> %>
+<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "pharmacist"  -> %>
 
 <div class="form-group pharmacy_list">
     <%= label f, :pharmacy, class: "control-label" %>
@@ -67,13 +67,13 @@
 
 <div class="form-group pharmacy_list">
     <%= label f, :pharmacy, class: "control-label" %>
-    <%= select f, :pharmacy_id,  ["": ""] ++ @pharmacies , class: "form-control", selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= select f, :pharmacy_id,  ["": ""] ++ @pharmacies , class: "form-control", selected: "" %>
     <%= error_tag f, :pharmacy_id %>
 </div>
 
 <div class="form-group courier_list" style="display:none">
     <%= label f, :courier, class: "control-label" %>
-    <%= select f, :courier_id, ["": ""] ++ @couriers, class: "form-control", selected: @conn.private.plug_session["current_user"].courier_id || "" %>
+    <%= select f, :courier_id, ["": ""] ++ @couriers, class: "form-control", selected: "" %>
     <%= error_tag f, :courier_id %>
 </div>
 
@@ -82,14 +82,14 @@
 
 <div class="form-group courier_list">
     <%= label f, :courier, class: "control-label" %>
-    <%= select f, :courier_id, ["": ""] ++ @couriers , class: "form-control", selected: @conn.private.plug_session["current_user"].courier_id || "" %>
+    <%= select f, :courier_id, ["": ""] ++ @couriers , class: "form-control", selected: "" %>
     <%= error_tag f, :courier_id %>
 </div>
 
 
 <div class="form-group pharmacy_list" style="display:none">
     <%= label f, :pharmacy, class: "control-label" %>
-    <%= select f, :pharmacy_id, ["": ""] ++ @pharmacies  , class: "form-control", selected: @conn.private.plug_session["current_user"].pharmacy_id || "" %>
+    <%= select f, :pharmacy_id, ["": ""] ++ @pharmacies  , class: "form-control", selected: "" %>
     <%= error_tag f, :pharmacy_id %>
 </div>
 

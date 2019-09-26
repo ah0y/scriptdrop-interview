@@ -142,12 +142,20 @@ defmodule Scriptdrop.Customer do
   """
   def list_courier_orders(courier_id) do
     #    Repo.all(Scriptdrop.Company.Pharmacy) |> Repo.preload(:orders)
+#    from(
+    #      c in Scriptdrop.Company.Courier,
+    #      join: p in assoc(c, :pharmacies),
+    #      join: o in assoc(p, :orders),
+    #      where: p.courier_id == ^courier_id,
+    #      group_by: [c.id, o.pickup_date]
+    #    )
+
     from(
-      c in Scriptdrop.Company.Courier,
-      join: p in assoc(c, :pharmacies),
-      join: o in assoc(p, :orders),
-      where: p.courier_id == ^courier_id,
-      group_by: [c.id, o.pickup_date]
+      o in Scriptdrop.Customer.Order,
+      join: p in assoc(o, :pharmacy),
+      join: c in assoc(p, :courier),
+      where: c.id == ^courier_id,
+      group_by: [o.id, o.pickup_date]
     )
     |> Repo.all || []
   end

@@ -4,8 +4,8 @@ defmodule ScriptdropWeb.PharmacyController do
   alias Scriptdrop.Company
   alias Scriptdrop.Company.Pharmacy
 
-#  plug :authorize_resource, model: Pharmacy
-#  use ScriptdropWeb.ControllerAuthorization
+  #  plug :authorize_resource, model: Pharmacy
+  #  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     pharmacies = Company.list_pharmacies()
@@ -16,6 +16,19 @@ defmodule ScriptdropWeb.PharmacyController do
     couriers = Company.load_couriers_datalist()
     changeset = Company.change_pharmacy(%Pharmacy{})
     render(conn, "new.html", changeset: changeset, couriers: couriers)
+  end
+
+  def create(conn, %{"pharmacy" => pharmacy_params}) do
+    case Company.create_pharmacy(pharmacy_params) do
+      {:ok, pharmacy} ->
+        conn
+        |> put_flash(:info, "Pharmacy created successfully.")
+        |> redirect(to: Routes.pharmacy_path(conn, :show, pharmacy))
+
+      {:error, %Ecto.Changeset{} = changeset} ->
+        couriers = Company.load_couriers_datalist()
+        render(conn, "new.html", changeset: changeset, couriers: couriers)
+    end
   end
 
   def create(conn, %{"pharmacy" => pharmacy_params}) do
@@ -46,6 +59,7 @@ defmodule ScriptdropWeb.PharmacyController do
 
   def update(conn, %{"id" => id, "pharmacy" => pharmacy_params}) do
     pharmacy = Company.get_pharmacy!(id)
+               |> Scriptdrop.Repo.preload(:address)
     case Company.update_pharmacy(pharmacy, pharmacy_params) do
       {:ok, pharmacy} ->
         conn
