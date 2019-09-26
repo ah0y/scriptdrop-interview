@@ -1,5 +1,29 @@
 <h1>Edit Order</h1>
 
-<%= render "form.html", Map.put(assigns, :action, Routes.order_path(@conn, :update, @order)) %>
+<%= cond do   %>
+
+<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "pharmacist" -> %>
+
+<%= render "pharmacy_order_form.html", Map.put(assigns, :action, Routes.order_path(@conn, :update, @order)) %>
 
 <span><%= link "Back", to: Routes.order_path(@conn, :index) %></span>
+
+<%= Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles == "courier" -> %>
+
+<%= render "courier_order_form.html", Map.put(assigns, :action, Routes.order_path(@conn, :update, @order)) %>
+
+<span><%= link "Back", to: Routes.order_path(@conn, :index) %></span>
+
+<%= @conn.assigns.current_user.roles == "pharmacist" ->  %>
+
+<%= render "pharmacy_order_form.html", Map.put(assigns, :action, Routes.order_path(@conn, :update, @order)) %>
+
+<span><%= link "Back", to: Routes.order_path(@conn, :index) %></span>
+
+<%= true -> %>
+
+<%= render "courier_order_form.html", Map.put(assigns, :action, Routes.order_path(@conn, :update, @order)) %>
+
+<span><%= link "Back", to: Routes.order_path(@conn, :index) %></span>
+
+<% end %>

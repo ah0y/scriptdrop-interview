@@ -33,11 +33,11 @@
     <% end %>
 
   <%= label f, :undelieverable %>
-  <%= checkbox f, :undelieverable %>
+  <%= checkbox f, :undelieverable, disabled: true %>
   <%= error_tag f, :undelieverable %>
 
   <%= label f, :delivered %>
-  <%= checkbox f, :delivered %>
+  <%= checkbox f, :delivered, disabled: true%>
   <%= error_tag f, :delivered %>
 
   <%= label f, :pickup_date %>

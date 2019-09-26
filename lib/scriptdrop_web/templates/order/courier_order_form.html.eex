@@ -1,0 +1,50 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+   <%= inputs_for f, :patient, fn p -> %>
+      <div class="form-group">
+        <%= label p, :name, "patient name", class: "control-label" %>
+        <%= text_input p, :name, class: "form-control", disabled: true %>
+        <%= error_tag p, :name %>
+      </div>
+            <%= inputs_for p, :address, fn a -> %>
+               <div class="form-group">
+                  <%= label a, :street %>
+                  <%= text_input a, :street, disabled: true %>
+                  <%= error_tag a, :street %>
+
+                  <%= label a, :city %>
+                  <%= text_input a, :city, disabled: true %>
+                  <%= error_tag a, :city %>
+
+                  <%= label a, :state %>
+                  <%= text_input a, :state, disabled: true %>
+                  <%= error_tag a, :state %>
+
+                  <%= label a, :zip %>
+                  <%= number_input a, :zip, disabled: true %>
+                  <%= error_tag a, :zip %>
+               </div>
+             <% end %>
+    <% end %>
+
+  <%= label f, :undelieverable %>
+  <%= checkbox f, :undelieverable %>
+  <%= error_tag f, :undelieverable %>
+
+  <%= label f, :delivered %>
+  <%= checkbox f, :delivered %>
+  <%= error_tag f, :delivered %>
+
+  <%= label f, :pickup_date %>
+  <%= datetime_select f, :pickup_date, disabled: true %>
+  <%= error_tag f, :pickup_date %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

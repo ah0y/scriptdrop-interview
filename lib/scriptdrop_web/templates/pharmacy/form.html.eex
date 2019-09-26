@@ -9,6 +9,26 @@
   <%= text_input f, :name %>
   <%= error_tag f, :name %>
 
+              <%= inputs_for f, :address, fn a -> %>
+                 <div class="form-group">
+                    <%= label a, :street %>
+                    <%= text_input a, :street %>
+                    <%= error_tag a, :street %>
+
+                    <%= label a, :city %>
+                    <%= text_input a, :city %>
+                    <%= error_tag a, :city %>
+
+                    <%= label a, :state %>
+                    <%= text_input a, :state %>
+                    <%= error_tag a, :state %>
+
+                    <%= label a, :zip %>
+                    <%= number_input a, :zip %>
+                    <%= error_tag a, :zip %>
+                 </div>
+               <% end %>
+
   <div>
     <%= submit "Save" %>
   </div>

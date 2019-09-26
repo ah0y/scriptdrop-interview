@@ -36,6 +36,7 @@ defmodule ScriptdropWeb.PharmacyController do
 
   def edit(conn, %{"id" => id}) do
     pharmacy = Company.get_pharmacy!(id)
+               |> Scriptdrop.Repo.preload(:address)
     changeset = Company.change_pharmacy(pharmacy)
     render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset)
   end

@@ -18,6 +18,7 @@ defmodule Scriptdrop.Company.Courier do
   def changeset(courier, attrs) do
     courier
     |> cast(attrs, [:name, :address_id])
+    |> cast_assoc(:address, required: true)
     |> validate_required([:name, :address_id])
   end
 
