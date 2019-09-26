@@ -3,23 +3,79 @@ defmodule ScriptdropWeb.OrderController do
 
   alias Scriptdrop.Customer
   alias Scriptdrop.Customer.Order
-#
-#  plug :authorize_resource, model: Order
-#  use ScriptdropWeb.ControllerAuthorization
+  #
+  #  plug :authorize_resource, model: Order
+  #  use ScriptdropWeb.ControllerAuthorization
 
-  def index(conn, _params, user) do
-    orders = Customer.list_orders()
+  def index(
+        %Plug.Conn{
+          private: %{
+            plug_session: %{
+              "current_user" => %Scriptdrop.Coherence.User{
+                "pharmacy_id": pharmacy_id
+              }
+            }
+          }
+        } = conn,
+
+        _params
+      ) when is_integer(pharmacy_id) do
+
+    orders = Customer.list_pharmacy_orders(pharmacy_id)
     render(conn, "index.html", orders: orders)
   end
 
-  def new(conn, _params, user) do
+  def index(
+        %Plug.Conn{
+          private: %{
+            plug_session: %{
+              "current_user" => %Scriptdrop.Coherence.User{
+                "courier_id": courier_id
+              }
+            }
+          }
+        } = conn,
+        _params
+      ) when is_integer(courier_id) do
+    orders = Customer.list_courier_orders(courier_id)
+    render(conn, "index.html", orders: orders)
+  end
+
+  def index(
+        conn = %Plug.Conn{
+          assigns: %{
+            current_user: %{
+              pharmacy_id: pharmacy_id
+            }
+          }
+        },
+        _params
+      ) when is_integer(pharmacy_id) do
+    orders = Customer.list_pharmacy_orders(pharmacy_id)
+    render(conn, "index.html", orders: orders)
+  end
+
+  def index(
+        conn = %Plug.Conn{
+          assigns: %{
+            current_user: %{
+              courier_id: courier_id
+            }
+          }
+        },
+        _params
+      ) when is_integer(courier_id) do
+    orders = Customer.list_courier_orders(courier_id)
+    render(conn, "index.html", orders: orders)
+  end
+
+  def new(conn, _params) do
     changeset = Customer.change_order(%Order{})
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"order" => order_params}, user) do
-#    require IEx; IEx.pry()
-    case Customer.create_order(Map.merge(%{"pharmacy_id" => user.id}, order_params)) do
+  def create(conn, %{"order" => order_params}) do
+    case Customer.create_order(order_params) do
       {:ok, order} ->
         conn
         |> put_flash(:info, "Order created successfully.")
@@ -30,19 +86,19 @@ defmodule ScriptdropWeb.OrderController do
     end
   end
 
-  def show(conn, %{"id" => id}, user) do
-#    require IEx; IEx.pry()
+  def show(conn, %{"id" => id}) do
     order = Customer.get_order!(id)
     render(conn, "show.html", order: order)
   end
 
   def edit(conn, %{"id" => id}) do
-    order = Customer.get_order!(id) |> Scriptdrop.Repo.preload([{:patient, :address}])
+    order = Customer.get_order!(id)
+            |> Scriptdrop.Repo.preload([{:patient, :address}])
     changeset = Customer.change_order(order)
     render(conn, "edit.html", order: order, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "order" => order_params}, user) do
+  def update(conn, %{"id" => id, "order" => order_params}) do
     order = Customer.get_order!(id)
 
     case Customer.update_order(order, order_params) do
@@ -56,20 +112,12 @@ defmodule ScriptdropWeb.OrderController do
     end
   end
 
-  def delete(conn, %{"id" => id}, user) do
+  def delete(conn, %{"id" => id}) do
     order = Customer.get_order!(id)
     {:ok, _order} = Customer.delete_order(order)
 
     conn
     |> put_flash(:info, "Order deleted successfully.")
     |> redirect(to: Routes.order_path(conn, :index))
-  end
-
-  def action(conn, _) do
-    apply(
-      __MODULE__,
-      action_name(conn),
-      [conn, conn.params, conn.assigns.current_user]
-    )
   end
 end

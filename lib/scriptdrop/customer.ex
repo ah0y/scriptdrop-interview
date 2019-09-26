@@ -118,6 +118,31 @@ defmodule Scriptdrop.Customer do
   end
 
   @doc """
+  Returns the list of orders for a pharmacy.
+
+  ## Examples
+
+      iex> list_pharmacy_orders()
+      [%Order{}, ...]
+
+  """
+  def list_pharmacy_orders(pharmacy_id) do
+    Repo.get_by(Order, pharmacy_id: pharmacy_id) || []
+  end
+
+  @doc """
+  Returns the list of orders for a courier.
+
+  ## Examples
+
+      iex> list_courier_orders()
+      [%Order{}, ...]
+
+  """
+  def list_courier_orders(courier_id) do
+    Repo.get_by(Order, courier_id: courier_id) || []
+  end
+  @doc """
   Gets a single order.
 
   Raises `Ecto.NoResultsError` if the Order does not exist.
