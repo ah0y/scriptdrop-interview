@@ -36,15 +36,12 @@ defmodule ScriptdropWeb.CourierController do
 
   def edit(conn, %{"id" => id}) do
     courier = Company.get_courier!(id)
-              |> Scriptdrop.Repo.preload(:address)
     changeset = Company.change_courier(courier)
     render(conn, "edit.html", courier: courier, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "courier" => courier_params}) do
     courier = Company.get_courier!(id)
-              |> Scriptdrop.Repo.preload(:address)
-
     case Company.update_courier(courier, courier_params) do
       {:ok, courier} ->
         conn

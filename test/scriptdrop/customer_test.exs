@@ -6,6 +6,14 @@ defmodule Scriptdrop.CustomerTest do
   describe "patients" do
     alias Scriptdrop.Customer.Patient
 
+    @address %{
+      address: %{
+        street: "some street",
+        city: "some city",
+        state: "some state",
+        zip: 1234
+      }
+    }
     @valid_attrs %{name: "some name"}
     @update_attrs %{name: "some updated name"}
     @invalid_attrs %{name: nil}
@@ -14,6 +22,7 @@ defmodule Scriptdrop.CustomerTest do
       {:ok, patient} =
         attrs
         |> Enum.into(@valid_attrs)
+        |> Enum.into(@address)
         |> Customer.create_patient()
 
       patient
@@ -30,7 +39,7 @@ defmodule Scriptdrop.CustomerTest do
     end
 
     test "create_patient/1 with valid data creates a patient" do
-      assert {:ok, %Patient{} = patient} = Customer.create_patient(@valid_attrs)
+      assert {:ok, %Patient{} = patient} = Customer.create_patient(Map.merge(@address, @valid_attrs))
       assert patient.name == "some name"
     end
 
@@ -65,6 +74,17 @@ defmodule Scriptdrop.CustomerTest do
   describe "orders" do
     alias Scriptdrop.Customer.Order
 
+    @patient  %{
+      patient: %{
+        address: %{
+          city: "a",
+          state: "a",
+          street: "1",
+          zip: 1
+        },
+        name: "a"
+      }
+    }
     @valid_attrs %{pickup_date: ~N[2010-04-17 14:00:00], undelieverable: true, delivered: true}
     @update_attrs %{pickup_date: ~N[2011-05-18 15:01:01], undelieverable: false, delivered: false}
     @invalid_attrs %{pickup_date: nil, undelieverable: nil, delivered: nil}
@@ -73,8 +93,8 @@ defmodule Scriptdrop.CustomerTest do
       {:ok, order} =
         attrs
         |> Enum.into(@valid_attrs)
+        |> Enum.into(@patient)
         |> Customer.create_order()
-
       order
     end
 
@@ -89,7 +109,7 @@ defmodule Scriptdrop.CustomerTest do
     end
 
     test "create_order/1 with valid data creates a order" do
-      assert {:ok, %Order{} = order} = Customer.create_order(@valid_attrs)
+      assert {:ok, %Order{} = order} = Customer.create_order(Map.merge(@patient, @valid_attrs))
       assert order.pickup_date == ~N[2010-04-17 14:00:00]
       assert order.undelieverable == true
       assert order.delivered == true

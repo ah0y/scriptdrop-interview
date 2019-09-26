@@ -18,7 +18,7 @@ defmodule Scriptdrop.Company do
 
   """
   def list_couriers do
-    Repo.all(Courier)
+    Repo.all(Courier) |> Repo.preload(:address)
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Scriptdrop.Company do
       ** (Ecto.NoResultsError)
 
   """
-  def get_courier!(id), do: Repo.get!(Courier, id)
+  def get_courier!(id), do: Repo.get!(Courier, id) |> Repo.preload(:address)
 
   @doc """
   Creates a courier.
@@ -114,7 +114,7 @@ defmodule Scriptdrop.Company do
 
   """
   def list_pharmacies do
-    Repo.all(Pharmacy)
+    Repo.all(Pharmacy) |> Repo.preload(:address)
   end
 
   @doc """
@@ -131,7 +131,7 @@ defmodule Scriptdrop.Company do
       ** (Ecto.NoResultsError)
 
   """
-  def get_pharmacy!(id), do: Repo.get!(Pharmacy, id)
+  def get_pharmacy!(id), do: Repo.get!(Pharmacy, id) |> Repo.preload(:address)
 
   @doc """
   Creates a pharmacy.

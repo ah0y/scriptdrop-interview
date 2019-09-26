@@ -51,7 +51,6 @@ defmodule ScriptdropWeb.PharmacyController do
 
   def edit(conn, %{"id" => id}) do
     pharmacy = Company.get_pharmacy!(id)
-               |> Scriptdrop.Repo.preload(:address)
     couriers = Company.load_couriers_datalist()
     changeset = Company.change_pharmacy(pharmacy)
     render(conn, "edit.html", pharmacy: pharmacy, changeset: changeset, couriers: couriers)
@@ -59,7 +58,6 @@ defmodule ScriptdropWeb.PharmacyController do
 
   def update(conn, %{"id" => id, "pharmacy" => pharmacy_params}) do
     pharmacy = Company.get_pharmacy!(id)
-               |> Scriptdrop.Repo.preload(:address)
     case Company.update_pharmacy(pharmacy, pharmacy_params) do
       {:ok, pharmacy} ->
         conn

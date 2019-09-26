@@ -1,17 +1,17 @@
-# Script for populating the database. You can run it as:
+## Script for populating the database. You can run it as:
+##
+##     mix run priv/repo/seeds.exs
+##
+## Inside the script, you can read and write to any of your
+## repositories directly:
+##
+##     Scriptdrop.Repo.insert!(%Scriptdrop.SomeSchema{})
+##
+## We recommend using the bang functions (`insert!`, `update!`
+## and so on) as they will fail if something goes wrong.
 #
-#     mix run priv/repo/seeds.exs
 #
-# Inside the script, you can read and write to any of your
-# repositories directly:
 #
-#     Scriptdrop.Repo.insert!(%Scriptdrop.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
-
-
-
 Scriptdrop.Repo.insert!(
 
   %Scriptdrop.Company.Courier{
@@ -71,21 +71,3 @@ Scriptdrop.Repo.insert!(
 )
 
 
-#import Ecto.Changeset
-#
-#changeset = Scriptdrop.Coherence.User.changeset(
-#  %Scriptdrop.Coherence.User{},
-#  %{
-#    name: "abe",
-#    email: "abe03@gmail.com",
-#    password: "password",
-#    password_hash: "$2b$12$yPfPx1nWGe3yb/UfLfPy.Op9REGVuZbVze85heRgsu9uAVj7/MTUK",
-#    roles: "courier"
-#  }
-#)
-#
-#
-#break! Scriptdrop.Coherence.User.changeset / 2
-
-
-#    model |> cast(params, [:roles, :name, :email] ++ coherence_fields()) |> Ecto.Changeset.validate_subset(:roles, ["pharmacist", "courier"])

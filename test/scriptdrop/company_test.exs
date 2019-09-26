@@ -6,6 +6,7 @@ defmodule Scriptdrop.CompanyTest do
   describe "couriers" do
     alias Scriptdrop.Company.Courier
 
+    @address %{address: %{street: "some street", city: "some city", state: "some state", zip: 1234}}
     @valid_attrs %{name: "some name"}
     @update_attrs %{name: "some updated name"}
     @invalid_attrs %{name: nil}
@@ -14,6 +15,7 @@ defmodule Scriptdrop.CompanyTest do
       {:ok, courier} =
         attrs
         |> Enum.into(@valid_attrs)
+        |> Enum.into(@address)
         |> Company.create_courier()
 
       courier
@@ -30,7 +32,7 @@ defmodule Scriptdrop.CompanyTest do
     end
 
     test "create_courier/1 with valid data creates a courier" do
-      assert {:ok, %Courier{} = courier} = Company.create_courier(@valid_attrs)
+      assert {:ok, %Courier{} = courier} = Company.create_courier(Map.merge(@address, @valid_attrs))
       assert courier.name == "some name"
     end
 
@@ -65,16 +67,19 @@ defmodule Scriptdrop.CompanyTest do
   describe "pharmacies" do
     alias Scriptdrop.Company.Pharmacy
 
+    @address %{address: %{street: "some street", city: "some city", state: "some state", zip: 1234}}
     @valid_attrs %{name: "some name"}
     @update_attrs %{name: "some updated name"}
     @invalid_attrs %{name: nil}
 
     def pharmacy_fixture(attrs \\ %{}) do
+      courier = courier_fixture()
       {:ok, pharmacy} =
         attrs
         |> Enum.into(@valid_attrs)
+        |> Enum.into(@address)
+        |> Enum.into(%{courier_id: courier.id})
         |> Company.create_pharmacy()
-
       pharmacy
     end
 
@@ -89,7 +94,7 @@ defmodule Scriptdrop.CompanyTest do
     end
 
     test "create_pharmacy/1 with valid data creates a pharmacy" do
-      assert {:ok, %Pharmacy{} = pharmacy} = Company.create_pharmacy(@valid_attrs)
+      assert {:ok, %Pharmacy{} = pharmacy} = Company.create_pharmacy(Map.merge(@address, @valid_attrs))
       assert pharmacy.name == "some name"
     end
 

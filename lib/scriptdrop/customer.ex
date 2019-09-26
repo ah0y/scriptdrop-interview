@@ -18,7 +18,7 @@ defmodule Scriptdrop.Customer do
 
   """
   def list_patients do
-    Repo.all(Patient)
+    Repo.all(Patient) |> Repo.preload(:address)
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule Scriptdrop.Customer do
       ** (Ecto.NoResultsError)
 
   """
-  def get_patient!(id), do: Repo.get!(Patient, id)
+  def get_patient!(id), do: Repo.get!(Patient, id)  |> Repo.preload(:address)
 
   @doc """
   Creates a patient.
@@ -114,7 +114,7 @@ defmodule Scriptdrop.Customer do
 
   """
   def list_orders do
-    Repo.all(Order)
+    Repo.all(Order) |> Repo.preload([{:patient, :address}])
   end
 
   @doc """
@@ -164,7 +164,7 @@ defmodule Scriptdrop.Customer do
       ** (Ecto.NoResultsError)
 
   """
-  def get_order!(id), do: Repo.get!(Order, id)
+  def get_order!(id), do: Repo.get!(Order, id) |> Repo.preload([{:patient, :address}])
 
   @doc """
   Creates a order.
