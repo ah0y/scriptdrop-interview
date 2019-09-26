@@ -25,10 +25,6 @@ defmodule Scriptdrop.AccountTest do
       assert {:error, %Ecto.Changeset{}} = Account.create_user(@invalid_attrs)
     end
 
-#    test "create_user/1 creates a user with a default role of pharmacist" do
-#      {:ok, user} = Account.create_user(@valid_attrs)
-#      assert user.roles == "pharmacist"
-#    end
 
     test "create_user/1 validates a correct role" do
       assert {:error, %Ecto.Changeset{}} = Account.create_user(Map.put(@valid_attrs, :roles, "pilot"))
