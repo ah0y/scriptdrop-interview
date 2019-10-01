@@ -24,7 +24,7 @@ defmodule ScriptdropWeb do
       import Plug.Conn
       import ScriptdropWeb.Gettext
       alias ScriptdropWeb.Router.Helpers, as: Routes
-#      import Canary.Plugs
+      import Canary.Plugs
     end
   end
 

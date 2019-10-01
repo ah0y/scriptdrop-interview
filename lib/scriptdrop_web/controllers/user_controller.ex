@@ -5,8 +5,9 @@ defmodule ScriptdropWeb.UserController do
   alias Scriptdrop.Account
   alias Scriptdrop.Coherence.User
   alias Scriptdrop.Company
-  #  plug :authorize_resource, model: Scriptdrop.Coherence.User
-  #  use ScriptdropWeb.ControllerAuthorization
+
+  plug :authorize_resource, model: Scriptdrop.Coherence.User
+  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     users = Account.list_users()
@@ -53,6 +54,7 @@ defmodule ScriptdropWeb.UserController do
         conn = conn
                |> Plug.Conn.put_session(:current_user, user)
                |> put_flash(:info, "User updated successfully.")
+        require IEx; IEx.pry()
         redirect(conn, to: Routes.user_path(conn, :show, user))
       {:error, %Ecto.Changeset{} = changeset} ->
         pharmacies = Company.load_pharmacies()

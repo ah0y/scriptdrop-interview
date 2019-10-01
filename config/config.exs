@@ -69,3 +69,5 @@ config :coherence, ScriptdropWeb.Coherence.Mailer,
   api_key: "your api key here"
 
 # %% End Coherence Configuration %%
+
+config :canary, repo: Scriptdrop.Repo

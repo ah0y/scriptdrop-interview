@@ -3,9 +3,9 @@ defmodule ScriptdropWeb.PatientController do
 
   alias Scriptdrop.Customer
   alias Scriptdrop.Customer.Patient
-#
-#  plug :authorize_resource, model: Patient
-#  use ScriptdropWeb.ControllerAuthorization
+
+  plug :authorize_resource, model: Patient
+  use ScriptdropWeb.ControllerAuthorization
 
   def index(conn, _params) do
     patients = Customer.list_patients()
