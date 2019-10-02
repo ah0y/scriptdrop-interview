@@ -2,36 +2,6 @@
     <div class="breadcrumb text-right justify-content-end">
         <%= if Coherence.current_user_name(@conn) do %>
         <%= cond do %>
-
-        <% Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles
-        == "pharmacist" && @conn.private.plug_session["current_user"].pharmacy_id -> %>
-        <div>
-            <a class="dropdown-toggle" role="button" data-toggle="dropdown">
-                updated pharmacy
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <%= link "orders", to: Routes.order_path(@conn, :index), class: "ml-auto" %>
-                 <%= link "csv", to: Routes.csv_path(@conn, :index), class: "ml-auto" %>
-                <%= link "new order", to: Routes.order_path(@conn, :new), class: "ml-auto"%>
-                <%= link "my pharmacy", to: Routes.pharmacy_path(@conn, :show,
-                @conn.private.plug_session["current_user"].pharmacy_id), class: "ml-auto"%>
-            </ul>
-        </div>
-
-        <% Map.has_key?(@conn.private.plug_session, "current_user") && @conn.private.plug_session["current_user"].roles
-        == "courier" &&  @conn.private.plug_session["current_user"].courier_id-> %>
-        <div>
-            <a class="dropdown-toggle" role="button" data-toggle="dropdown">
-                updated courier
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <%= link "orders", to: Routes.order_path(@conn, :index), class: "ml-auto"
-                %>
-                <%= link "csv", to: Routes.csv_path(@conn, :index), class: "ml-auto" %>
-                <%= link "my courier", to: Routes.courier_path(@conn, :show, @conn.private.plug_session["current_user"].courier_id), class: "ml-auto" %>
-            </ul>
-        </div>
-
         <% @conn.assigns.current_user.roles == "pharmacist" && @conn.assigns.current_user.pharmacy_id != nil-> %>
         <div>
 

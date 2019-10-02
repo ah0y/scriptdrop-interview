@@ -2,12 +2,22 @@ defmodule ScriptdropWeb.PharmacyControllerTest do
   use ScriptdropWeb.ConnCase
 
   alias Scriptdrop.Company
+  import Scriptdrop.Factory
 
   @address %{address: %{street: "some street", city: "some city", state: "some state", zip: 1234}}
   @create_attrs %{name: "some name"}
   @update_attrs %{name: "some updated name"}
   @invalid_attrs %{name: nil}
 
+  setup %{conn: conn} do
+    pharmacy = insert(:pharmacy)
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{name: "test", email: "test@example.com", password: "test", password_confirmation: "test", roles: "pharmacist", pharmacy_id: pharmacy.id}
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(conn, :current_user, user), user: user}
+  end
 
   def fixture(:courier) do
     {:ok, courier} = Company.create_courier(Map.merge(@address, @create_attrs))

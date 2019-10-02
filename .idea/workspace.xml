@@ -2,22 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d803bfb6-ebbb-48b0-be26-adddd7b279c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/abilities.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/abilities.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/courier_controller.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop/account/user.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/csv_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/csv_controller.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/order_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/patient_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/pharmacy_controller.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/page_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/page_controller.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/controllers/user_controller.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/shared/navbar.html.eex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scriptdrop_web/templates/user/form.html.eex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mix.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mix.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/scriptdrop_web/controllers/order_controller_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/scriptdrop_web/controllers/order_controller_test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/scriptdrop_web/controllers/page_controller_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/scriptdrop_web/controllers/page_controller_test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/scriptdrop_web/controllers/patient_controller_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/scriptdrop_web/controllers/patient_controller_test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/scriptdrop_web/controllers/pharmacy_controller_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/test/scriptdrop_web/controllers/pharmacy_controller_test.exs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,7 +45,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../metro" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -41,6 +60,7 @@
       </list>
     </option>
   </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -57,7 +77,9 @@
       <workItem from="1569499013124" duration="4000" />
       <workItem from="1569845032958" duration="4982000" />
       <workItem from="1569933932862" duration="607000" />
-      <workItem from="1569938844872" duration="4708000" />
+      <workItem from="1569938844872" duration="7804000" />
+      <workItem from="1570016572970" duration="7942000" />
+      <workItem from="1570025967552" duration="1941000" />
     </task>
     <servers />
   </component>

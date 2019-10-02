@@ -66,7 +66,7 @@ defimpl Canada.Can, for: User do
     true
   end
 
-  def can?(%User{pharmacy_id: pharmacy_id, roles: "pharmacy"}, action, %Pharmacy{id: pharmacy_id_2})
+  def can?(%User{pharmacy_id: pharmacy_id, roles: "pharmacist"}, action, %Pharmacy{id: pharmacy_id_2})
       when action in [:edit, :update, :delete] do
     pharmacy_id == pharmacy_id_2
   end

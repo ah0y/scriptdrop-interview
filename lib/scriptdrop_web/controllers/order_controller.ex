@@ -8,40 +8,6 @@ defmodule ScriptdropWeb.OrderController do
   use ScriptdropWeb.ControllerAuthorization
 
   def index(
-        %Plug.Conn{
-          private: %{
-            plug_session: %{
-              "current_user" => %Scriptdrop.Coherence.User{
-                "pharmacy_id": pharmacy_id
-              }
-            }
-          }
-        } = conn,
-
-        _params
-      ) when is_integer(pharmacy_id) do
-
-    orders = Customer.list_pharmacy_orders(pharmacy_id)
-    render(conn, "index.html", orders: orders)
-  end
-
-  def index(
-        %Plug.Conn{
-          private: %{
-            plug_session: %{
-              "current_user" => %Scriptdrop.Coherence.User{
-                "courier_id": courier_id
-              }
-            }
-          }
-        } = conn,
-        _params
-      ) when is_integer(courier_id) do
-    orders = Customer.list_courier_orders(courier_id)
-    render(conn, "index.html", orders: orders)
-  end
-
-  def index(
         conn = %Plug.Conn{
           assigns: %{
             current_user: %{
@@ -67,6 +33,15 @@ defmodule ScriptdropWeb.OrderController do
       ) when is_integer(courier_id) do
     orders = Customer.list_courier_orders(courier_id)
     render(conn, "index.html", orders: orders)
+  end
+
+  def index(
+        conn,
+        _params
+      )  do
+    conn
+    |> put_flash(:info, "Please assign yourself either a courier or pharmacy company by hitting 'Edit'")
+    |> redirect(to: Routes.user_path(conn, :show, Coherence.current_user(conn)))
   end
 
   def new(conn, _params) do

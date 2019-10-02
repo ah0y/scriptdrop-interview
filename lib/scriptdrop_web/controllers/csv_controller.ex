@@ -13,32 +13,6 @@ defmodule ScriptdropWeb.CsvController do
   end
 
   def export(conn, _params) do
-    #    query = from(
-    #      t in Task,
-    #      join: u in User,
-    #      where: t.user_id == u.id,
-    #      join: e in Entry,
-    #      where: e.task_id == t.id,
-    #      group_by: t.id,
-    #      select: %{
-    #        t |
-    #        total_time: sum(e.duration)
-    #      }
-    #    )
-    #
-    #    tasks = Repo.all(query)
-    #    tasks = Repo.preload(tasks, :users)
-    #    csv = List.foldl(
-    #      tasks,
-    #      [],
-    #      fn task, acc ->
-    #        [
-    #          [task.users.name, task.task_name, task.total_time.secs] | acc
-    #        ]
-    #      end
-    #    )
-
-
     csv = from(
       o in Order,
       join: p in assoc(o, :pharmacy),

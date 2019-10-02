@@ -53,8 +53,6 @@ defmodule Scriptdrop.Coherence.User do
     |> cast(params, [:pharmacy_id, :courier_id, :roles, :name, :email] ++ coherence_fields())
     |> Ecto.Changeset.validate_inclusion(:roles, ["pharmacist", "courier"])
     |> validate_required([:roles, :name, :email])
-    |> put_change(:pharmacy_id, nil)
-    |> put_change(:courier_id, nil)
     |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
     |> validate_coherence(params)

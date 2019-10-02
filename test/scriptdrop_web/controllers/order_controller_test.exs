@@ -2,10 +2,21 @@ defmodule ScriptdropWeb.OrderControllerTest do
   use ScriptdropWeb.ConnCase
 
   alias Scriptdrop.Customer
+  import Scriptdrop.Factory
 
   @create_attrs %{pickup_date: ~N[2010-04-17 14:00:00], undelieverable: true, delivered: true}
   @update_attrs %{pickup_date: ~N[2011-05-18 15:01:01], undelieverable: false, delivered: false}
   @invalid_attrs %{pickup_date: nil, undelieverable: nil, delivered: nil}
+
+  setup %{conn: conn} do
+    pharmacy = insert(:pharmacy)
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{name: "test", email: "test@example.com", password: "test", password_confirmation: "test", roles: "pharmacist", pharmacy_id: pharmacy.id}
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(conn, :current_user, user), user: user}
+  end
 
   def fixture(:order) do
     {:ok, order} = Customer.create_order(@create_attrs)
@@ -29,7 +40,7 @@ defmodule ScriptdropWeb.OrderControllerTest do
   describe "create order" do
     test "redirects to show when data is valid", %{conn: conn} do
       conn = post(conn, Routes.order_path(conn, :create), order: @create_attrs)
-
+      IO.inspect(conn)
       assert %{id: id} = redirected_params(conn)
       assert redirected_to(conn) == Routes.order_path(conn, :show, id)
 

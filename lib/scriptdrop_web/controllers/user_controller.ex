@@ -51,11 +51,9 @@ defmodule ScriptdropWeb.UserController do
     user = Account.get_user!(id)
     case Account.update_user(user, user_params) do
       {:ok, user} ->
-        conn = conn
-               |> Plug.Conn.put_session(:current_user, user)
+        Coherence.update_user_login(conn, user)
                |> put_flash(:info, "User updated successfully.")
-        require IEx; IEx.pry()
-        redirect(conn, to: Routes.user_path(conn, :show, user))
+               |> redirect(to: Routes.user_path(conn, :show, user))
       {:error, %Ecto.Changeset{} = changeset} ->
         pharmacies = Company.load_pharmacies()
         couriers = Company.load_couriers()
