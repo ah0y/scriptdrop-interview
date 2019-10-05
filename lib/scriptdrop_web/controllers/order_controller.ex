@@ -49,28 +49,7 @@ defmodule ScriptdropWeb.OrderController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(
-        %Plug.Conn{
-          private: %{
-            plug_session: %{
-              "current_user" => %Scriptdrop.Coherence.User{
-                "pharmacy_id": pharmacy_id
-              }
-            }
-          }
-        } = conn,
-        %{"order" => order_params}
-      ) do
-    case Customer.create_order(Map.merge(%{"pharmacy_id" => pharmacy_id}, order_params)) do
-      {:ok, order} ->
-        conn
-        |> put_flash(:info, "Order created successfully.")
-        |> redirect(to: Routes.order_path(conn, :show, order))
-
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
-    end
-  end
+#  conn = %Plug.Conn{assigns: %{current_user: %{pharmacy_id: pharmacy_id}}}
 
   def create(
         conn = %Plug.Conn{

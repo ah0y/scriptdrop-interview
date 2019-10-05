@@ -2,6 +2,7 @@ defmodule ScriptdropWeb.CourierControllerTest do
   use ScriptdropWeb.ConnCase
 
   alias Scriptdrop.Company
+  import Scriptdrop.Factory
 
   @address %{address: %{street: "some street", city: "some city", state: "some state", zip: 1234}}
   @create_attrs %{name: "some name"}
@@ -14,6 +15,8 @@ defmodule ScriptdropWeb.CourierControllerTest do
   end
 
   describe "index" do
+    setup [:create_courier_session]
+
     test "lists all couriers", %{conn: conn} do
       conn = get(conn, Routes.courier_path(conn, :index))
       assert html_response(conn, 200) =~ "Listing Couriers"
@@ -21,6 +24,8 @@ defmodule ScriptdropWeb.CourierControllerTest do
   end
 
   describe "new courier" do
+    setup [:create_user_session]
+
     test "renders form", %{conn: conn} do
       conn = get(conn, Routes.courier_path(conn, :new))
       assert html_response(conn, 200) =~ "New Courier"
@@ -28,15 +33,23 @@ defmodule ScriptdropWeb.CourierControllerTest do
   end
 
   describe "create courier" do
-#    test "redirects to show when data is valid", %{conn: conn} do
-#      conn = post(conn, Routes.courier_path(conn, :create), courier: @create_attrs)
-#
-#      assert %{id: id} = redirected_params(conn)
-#      assert redirected_to(conn) == Routes.courier_path(conn, :show, id)
-#
-#      conn = get(conn, Routes.courier_path(conn, :show, id))
-#      assert html_response(conn, 200) =~ "Show Courier"
-#    end
+    setup [:create_user_session]
+
+    test "redirects to show when data is valid", %{conn: conn} do
+      conn = post(conn, Routes.courier_path(conn, :create), courier: Enum.into(@address, @create_attrs))
+
+      assert %{id: id} = redirected_params(conn)
+      assert redirected_to(conn) == Routes.courier_path(conn, :show, id)
+
+      saved_assigns = conn.assigns
+      conn =
+        conn
+        |> recycle()
+        |> Map.put(:assigns, saved_assigns)
+
+      conn = get(conn, Routes.courier_path(conn, :show, id))
+      assert html_response(conn, 200) =~ "Show Courier"
+    end
 
     test "renders errors when data is invalid", %{conn: conn} do
       conn = post(conn, Routes.courier_path(conn, :create), courier: @invalid_attrs)
@@ -60,6 +73,12 @@ defmodule ScriptdropWeb.CourierControllerTest do
       conn = put(conn, Routes.courier_path(conn, :update, courier), courier: @update_attrs)
       assert redirected_to(conn) == Routes.courier_path(conn, :show, courier)
 
+      saved_assigns = conn.assigns
+      conn =
+        conn
+        |> recycle()
+        |> Map.put(:assigns, saved_assigns)
+
       conn = get(conn, Routes.courier_path(conn, :show, courier))
       assert html_response(conn, 200) =~ "some updated name"
     end
@@ -73,17 +92,59 @@ defmodule ScriptdropWeb.CourierControllerTest do
   describe "delete courier" do
     setup [:create_courier]
 
-    test "deletes chosen courier", %{conn: conn, courier: courier} do
-      conn = delete(conn, Routes.courier_path(conn, :delete, courier))
-      assert redirected_to(conn) == Routes.courier_path(conn, :index)
-      assert_error_sent 404, fn ->
-        get(conn, Routes.courier_path(conn, :show, courier))
-      end
-    end
+#    test "deletes chosen courier", %{conn: conn, courier: courier} do
+#      conn = delete(conn, Routes.courier_path(conn, :delete, courier))
+#      #can't delete couriers!
+#      assert redirected_to(conn) == "/"
+#    end
   end
 
   defp create_courier(_) do
-    courier = fixture(:courier)
-    {:ok, courier: courier}
+    courier = insert(:courier)
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{
+               name: "test",
+               email: "test@example.com",
+               password: "test",
+               password_confirmation: "test",
+               roles: "courier",
+               courier_id: courier.id
+             }
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(build_conn(), :current_user, user), user: user, courier: courier}
+  end
+
+  defp create_user_session(_)  do
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{
+               name: "test",
+               email: "test@example.com",
+               password: "test",
+               password_confirmation: "test",
+               roles: "courier",
+             }
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(build_conn(), :current_user, user), user: user}
+  end
+
+  defp create_courier_session(_)  do
+    courier = insert(:courier)
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{
+               name: "test",
+               email: "test@example.com",
+               password: "test",
+               password_confirmation: "test",
+               roles: "courier",
+               courier_id: courier.id
+             }
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(build_conn(), :current_user, user), user: user}
   end
 end

@@ -81,7 +81,7 @@ defimpl Canada.Can, for: User do
     true
   end
 
-  def can?(%User{pharmacy_id: id, roles: "pharmacy"}, action, pharmacy)
+  def can?(%User{pharmacy_id: id, roles: "pharmacist"}, action, pharmacy)
       when action in [:new, :create] do
     true
   end

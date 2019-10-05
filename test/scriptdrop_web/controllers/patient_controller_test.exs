@@ -16,29 +16,25 @@ defmodule ScriptdropWeb.PatientControllerTest do
   @update_attrs %{name: "some updated name"}
   @invalid_attrs %{name: nil}
 
-  setup %{conn: conn} do
-    pharmacy = insert(:pharmacy)
-    user = Scriptdrop.Coherence.User.changeset(
-             %Scriptdrop.Coherence.User{},
-             %{name: "test", email: "test@example.com", password: "test", password_confirmation: "test", roles: "pharmacist", pharmacy_id: pharmacy.id}
-           )
-           |> Scriptdrop.Repo.insert!
-    {:ok, conn: assign(conn, :current_user, user), user: user}
-  end
 
   def fixture(:patient) do
     {:ok, patient} = Customer.create_patient(Map.merge(@address, @create_attrs))
     patient
   end
 
-  describe "index" do
-    test "lists all patients", %{conn: conn} do
-      conn = get(conn, Routes.patient_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Patients"
-    end
-  end
+#  describe "index" do
+#    setup [:create_pharmacist_session]
+#
+#    #can't list all patients!
+#    test "lists all patients", %{conn: conn} do
+#      conn = get(conn, Routes.patient_path(conn, :index))
+#      assert html_response(conn, 200) =~ "Listing Patients"
+#    end
+#  end
 
   describe "new patient" do
+    setup [:create_pharmacist_session]
+
     test "renders form", %{conn: conn} do
       conn = get(conn, Routes.patient_path(conn, :new))
       assert html_response(conn, 200) =~ "New Patient"
@@ -46,15 +42,23 @@ defmodule ScriptdropWeb.PatientControllerTest do
   end
 
   describe "create patient" do
-#    test "redirects to show when data is valid", %{conn: conn} do
-#      conn = post(conn, Routes.patient_path(conn, :create), patient: @create_attrs)
-#
-#      assert %{id: id} = redirected_params(conn)
-#      assert redirected_to(conn) == Routes.patient_path(conn, :show, id)
-#
-#      conn = get(conn, Routes.patient_path(conn, :show, id))
-#      assert html_response(conn, 200) =~ "Show Patient"
-#    end
+    setup [:create_pharmacist_session]
+
+    test "redirects to show when data is valid", %{conn: conn} do
+      conn = post(conn, Routes.patient_path(conn, :create), patient: Enum.into(@address, @create_attrs))
+
+      assert %{id: id} = redirected_params(conn)
+      assert redirected_to(conn) == Routes.patient_path(conn, :show, id)
+
+      saved_assigns = conn.assigns
+      conn =
+        conn
+        |> recycle()
+        |> Map.put(:assigns, saved_assigns)
+
+      conn = get(conn, Routes.patient_path(conn, :show, id))
+      assert html_response(conn, 200) =~ "Show Patient"
+    end
 
     test "renders errors when data is invalid", %{conn: conn} do
       conn = post(conn, Routes.patient_path(conn, :create), patient: @invalid_attrs)
@@ -78,6 +82,12 @@ defmodule ScriptdropWeb.PatientControllerTest do
       conn = put(conn, Routes.patient_path(conn, :update, patient), patient: @update_attrs)
       assert redirected_to(conn) == Routes.patient_path(conn, :show, patient)
 
+      saved_assigns = conn.assigns
+      conn =
+        conn
+        |> recycle()
+        |> Map.put(:assigns, saved_assigns)
+
       conn = get(conn, Routes.patient_path(conn, :show, patient))
       assert html_response(conn, 200) =~ "some updated name"
     end
@@ -93,15 +103,42 @@ defmodule ScriptdropWeb.PatientControllerTest do
 
     test "deletes chosen patient", %{conn: conn, patient: patient} do
       conn = delete(conn, Routes.patient_path(conn, :delete, patient))
-      assert redirected_to(conn) == Routes.patient_path(conn, :index)
-      assert_error_sent 404, fn ->
-        get(conn, Routes.patient_path(conn, :show, patient))
-      end
+      assert redirected_to(conn) == "/"
     end
   end
 
   defp create_patient(_) do
+    pharmacy = insert(:pharmacy)
     patient = fixture(:patient)
-    {:ok, patient: patient}
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{
+               name: "test",
+               email: "test@example.com",
+               password: "test",
+               password_confirmation: "test",
+               roles: "pharmacist",
+               pharmacy_id: pharmacy.id
+             }
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(build_conn(), :current_user, user), user: user, patient: patient}
+  end
+
+  defp create_pharmacist_session(_)  do
+    pharmacy = insert(:pharmacy)
+    user = Scriptdrop.Coherence.User.changeset(
+             %Scriptdrop.Coherence.User{},
+             %{
+               name: "test",
+               email: "test@example.com",
+               password: "test",
+               password_confirmation: "test",
+               roles: "pharmacist",
+               pharmacy_id: pharmacy.id
+             }
+           )
+           |> Scriptdrop.Repo.insert!
+    {:ok, conn: assign(build_conn(), :current_user, user), user: user}
   end
 end
