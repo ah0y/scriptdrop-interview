@@ -25,12 +25,12 @@ defimpl Canada.Can, for: User do
     true
   end
 
-  def can?(%User{courier_id: id, roles: "courier"}, action, Order)
+  def can?(%User{courier_id: _id, roles: "courier"}, action, Order)
       when action in [:index] do
     true
   end
 
-  def can?(%User{pharmacy_id: id, roles: "pharmacist"}, action, Order)
+  def can?(%User{pharmacy_id: _id, roles: "pharmacist"}, action, Order)
       when action in [:index] do
     true
   end
@@ -60,7 +60,7 @@ defimpl Canada.Can, for: User do
     true
   end
 
-  def can?(%User{courier_id: id, roles: "courier"}, action, Courier)
+  def can?(%User{courier_id: _id, roles: "courier"}, action, Courier)
       when action in [:new, :create] do
     true
   end
@@ -80,7 +80,7 @@ defimpl Canada.Can, for: User do
     true
   end
 
-  def can?(%User{pharmacy_id: id, roles: "pharmacist"}, action, Pharmacy)
+  def can?(%User{pharmacy_id: _id, roles: "pharmacist"}, action, Pharmacy)
       when action in [:new, :create] do
     true
   end
