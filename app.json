@@ -1,8 +1,27 @@
 {
+  "name": "myappapi",
+  "description": "MyApp Backend Application",
+  "scripts": {
+    "postdeploy": "/app/bin/myapp seed"
+  },
+  "env": {
+    "POOL_SIZE": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {},
   "addons": [
     "heroku-postgresql"
   ],
   "buildpacks": [
-    {"url": "https://github.com/HashNuke/heroku-buildpack-elixir"}
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    }
   ]
 }
