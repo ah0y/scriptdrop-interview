@@ -4,12 +4,6 @@
   "scripts": {
   },
   "env": {
-    "POOL_SIZE": {
-      "required": true
-    },
-    "DATABASE_URL": {
-      "required": true
-    },
     "SECRET_KEY_BASE": {
       "generator": "secret"
     }
