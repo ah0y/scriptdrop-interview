@@ -101,40 +101,4 @@ defmodule Scriptdrop.Account do
   def change_user(%User{} = user) do
     User.changeset(user, %{})
   end
-
-  @doc """
-  Creates a courier.
-
-  ## Examples
-
-      iex> create_courier(%{field: value})
-      {:ok, %User{}}
-
-      iex> create_courier(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
-  """
-  def create_courier(attrs \\ %{}) do
-    %User{}
-    |> User.courier_registration_changeset(attrs)
-    |> Repo.insert()
-  end
-
-  @doc """
-  Creates a pharmacist.
-
-  ## Examples
-
-      iex> create_pharmacist(%{field: value})
-      {:ok, %User{}}
-
-      iex> create_pharmacist(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
-  """
-  def create_pharmacist(attrs \\ %{}) do
-    %User{}
-    |> User.pharmacist_registration_changeset(attrs)
-    |> Repo.insert()
-  end
 end

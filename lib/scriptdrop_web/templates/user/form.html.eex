@@ -46,7 +46,7 @@
     <%= error_tag f, :courier_id %>
 </div>
 
-<%= true -> %>
+<% true -> %>
 
 <div class="form-group courier_list">
     <%= label f, :courier, class: "control-label" %>
@@ -69,22 +69,19 @@
 </div>
 <% end %>
 <script>
-    console.log("hello")
     $("#user_roles_pharmacist").change(function () {
-            console.log("changed")
             if ($("#user_roles_pharmacist").is(':checked')) {
-                $('.courier_list').hide()
-                console.log("hide couriers")
+                $('.courier_list').hide();
+                console.log("hide couriers");
                 $('.pharmacy_list').show()
             }
         }
-    )
+    );
 
     $("#user_roles_courier").change(function () {
-            console.log("changed")
             if ($("#user_roles_courier").is(':checked')) {
-                $('.pharmacy_list').hide()
-                console.log("hide pharmacies")
+                $('.pharmacy_list').hide();
+                console.log("hide pharmacies");
                 $('.courier_list').show()
             }
         }

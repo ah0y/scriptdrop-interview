@@ -1,7 +1,6 @@
 defmodule ScriptdropWeb.UserController do
   use ScriptdropWeb, :controller
 
-  import Ecto.Query
   alias Scriptdrop.Account
   alias Scriptdrop.Coherence.User
   alias Scriptdrop.Company
@@ -21,7 +20,7 @@ defmodule ScriptdropWeb.UserController do
 
   def create(conn, %{"user" => user_params}) do
     case Account.create_user(user_params) do
-      {:ok, user} ->
+      {:ok, _user} ->
         conn
         |> put_flash(:info, "User created successfully.")
         |> redirect(to: Routes.page_path(conn, :index))

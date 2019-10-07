@@ -46,7 +46,9 @@ defmodule Scriptdrop.MixProject do
       {:ex_machina, "~> 2.3"},
       {:coherence, github: "appprova/coherence"},
       {:csv, "~> 2.3"},
-      {:canary, "~> 1.1.1"}
+      {:canary, "~> 1.1.1"},
+      {:phoenix_live_view, "~> 0.3.0"},
+      {:floki, ">= 0.0.0", only: :test}
     ]
   end
 

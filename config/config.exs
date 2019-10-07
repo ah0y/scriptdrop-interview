@@ -8,19 +8,42 @@
 use Mix.Config
 
 config :scriptdrop,
-  ecto_repos: [Scriptdrop.Repo]
+       ecto_repos: [Scriptdrop.Repo]
+
+config :phoenix,
+       template_engines: [
+         leex: Phoenix.LiveView.Engine
+       ]
 
 # Configures the endpoint
-config :scriptdrop, ScriptdropWeb.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "4vvOMub4CKLGscQkSZ7Jfq5xycW2KJEDO7RVNXKN/090K1b96Qpaia8aNFD0pa/G",
-  render_errors: [view: ScriptdropWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Scriptdrop.PubSub, adapter: Phoenix.PubSub.PG2]
+config :scriptdrop,
+       ScriptdropWeb.Endpoint,
+       url: [
+         host: "localhost"
+       ],
+       live_view: [
+         signing_salt: "6KqYOSjKws4MkPNqm3rWLA7kGDHWaTxi1F7Z9rrRsH5uvR6eiGexMXNvVffZtGVr"
+       ],
+       live_reload: [
+         patterns: [
+           ~r{lib/scriptdrop_web/live/.*(ex)$}
+         ]
+       ],
+       secret_key_base: "4vvOMub4CKLGscQkSZ7Jfq5xycW2KJEDO7RVNXKN/090K1b96Qpaia8aNFD0pa/G",
+       render_errors: [
+         view: ScriptdropWeb.ErrorView,
+         accepts: ~w(html json)
+       ],
+       pubsub: [
+         name: Scriptdrop.PubSub,
+         adapter: Phoenix.PubSub.PG2
+       ]
 
 # Configures Elixir's Logger
-config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+config :logger,
+       :console,
+       format: "$time $metadata[$level] $message\n",
+       metadata: [:request_id]
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
@@ -31,42 +54,43 @@ import_config "#{Mix.env()}.exs"
 
 # %% Coherence Configuration %%   Don't remove this line
 config :coherence,
-  user_schema: Scriptdrop.Coherence.User,
-  repo: Scriptdrop.Repo,
-  module: Scriptdrop,
-  web_module: ScriptdropWeb,
-  router: ScriptdropWeb.Router,
-  password_hashing_alg: Comeonin.Bcrypt,
-  messages_backend: ScriptdropWeb.Coherence.Messages,
-  registration_permitted_attributes: [
-    "email",
-    "name",
-    "password",
-    "roles",
-    "current_password",
-    "password_confirmation"
-  ],
-  invitation_permitted_attributes: ["name", "email"],
-  password_reset_permitted_attributes: [
-    "reset_password_token",
-    "password",
-    "password_confirmation"
-  ],
-  session_permitted_attributes: ["remember", "email", "password"],
-  email_from_name: "Your Name",
-  email_from_email: "yourname@example.com",
-  opts: [
-    :authenticatable,
-    :recoverable,
-    :lockable,
-    :trackable,
-    :unlockable_with_token,
-    :registerable
-  ]
+       user_schema: Scriptdrop.Coherence.User,
+       repo: Scriptdrop.Repo,
+       module: Scriptdrop,
+       web_module: ScriptdropWeb,
+       router: ScriptdropWeb.Router,
+       password_hashing_alg: Comeonin.Bcrypt,
+       messages_backend: ScriptdropWeb.Coherence.Messages,
+       registration_permitted_attributes: [
+         "email",
+         "name",
+         "password",
+         "roles",
+         "current_password",
+         "password_confirmation"
+       ],
+       invitation_permitted_attributes: ["name", "email"],
+       password_reset_permitted_attributes: [
+         "reset_password_token",
+         "password",
+         "password_confirmation"
+       ],
+       session_permitted_attributes: ["remember", "email", "password"],
+       email_from_name: "Your Name",
+       email_from_email: "yourname@example.com",
+       opts: [
+         :authenticatable,
+         :recoverable,
+         :lockable,
+         :trackable,
+         :unlockable_with_token,
+         :registerable
+       ]
 
-config :coherence, ScriptdropWeb.Coherence.Mailer,
-  adapter: Swoosh.Adapters.Sendgrid,
-  api_key: "your api key here"
+config :coherence,
+       ScriptdropWeb.Coherence.Mailer,
+       adapter: Swoosh.Adapters.Sendgrid,
+       api_key: "your api key here"
 
 # %% End Coherence Configuration %%
 

@@ -1,6 +1,8 @@
 defmodule ScriptdropWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :scriptdrop
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", ScriptdropWeb.UserSocket,
     websocket: true,
     longpoll: false

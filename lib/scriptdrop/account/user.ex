@@ -59,9 +59,6 @@ defmodule Scriptdrop.Coherence.User do
   end
 
   @doc false
-  @spec changeset(Ecto.Schema.t(), Map.t()) :: Ecto.Changeset.t()
-
-  @doc false
   @spec changeset(Ecto.Schema.t(), Map.t(), atom) :: Ecto.Changeset.t()
   def changeset(model, params, :password) do
     model
