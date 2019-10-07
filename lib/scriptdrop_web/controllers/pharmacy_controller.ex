@@ -24,20 +24,6 @@ defmodule ScriptdropWeb.PharmacyController do
         conn
         |> put_flash(:info, "Pharmacy created successfully.")
         |> redirect(to: Routes.pharmacy_path(conn, :show, pharmacy))
-
-      {:error, %Ecto.Changeset{} = changeset} ->
-        couriers = Company.load_couriers_datalist()
-        render(conn, "new.html", changeset: changeset, couriers: couriers)
-    end
-  end
-
-  def create(conn, %{"pharmacy" => pharmacy_params}) do
-    case Company.create_pharmacy(pharmacy_params) do
-      {:ok, pharmacy} ->
-        conn
-        |> put_flash(:info, "Pharmacy created successfully.")
-        |> redirect(to: Routes.pharmacy_path(conn, :show, pharmacy))
-
       {:error, %Ecto.Changeset{} = changeset} ->
         couriers = Company.load_couriers_datalist()
         render(conn, "new.html", changeset: changeset, couriers: couriers)

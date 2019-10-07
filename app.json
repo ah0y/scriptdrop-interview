@@ -1,0 +1,26 @@
+{
+  "name": "drop",
+  "description": "drop",
+  "scripts": {
+  },
+  "env": {
+    "POOL_SIZE": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    }
+  },
+  "formation": {},
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    }
+  ]
+}
