@@ -1,0 +1,10 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "mix deps.get",
+        "test": "mix test ."
+      }
+    }
+  }
+}

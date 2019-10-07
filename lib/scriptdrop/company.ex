@@ -213,7 +213,7 @@ defmodule Scriptdrop.Company do
       Courier
       |> Courier.courier_and_ids
     couriers = Repo.all query
-    couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
+    _couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
   end
 
   @doc """
@@ -230,7 +230,7 @@ defmodule Scriptdrop.Company do
     query =
       Courier
       |> Courier.courier_and_ids
-    couriers = Repo.all query
+    _couriers = Repo.all query
 #    couriers = Enum.map(couriers, fn %{id: key, name: value} -> {:"#{value}", key} end)
   end
 
@@ -250,6 +250,6 @@ defmodule Scriptdrop.Company do
       Pharmacy
       |> Pharmacy.pharmacy_and_ids
     pharmacies = Repo.all query
-    pharmacies = Enum.map(pharmacies, fn %{id: key, name: value} -> {:"#{value}", key} end)
+    _pharmacies = Enum.map(pharmacies, fn %{id: key, name: value} -> {:"#{value}", key} end)
   end
 end

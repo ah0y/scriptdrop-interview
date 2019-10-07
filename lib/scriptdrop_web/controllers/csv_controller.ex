@@ -2,8 +2,7 @@ defmodule ScriptdropWeb.CsvController do
   use ScriptdropWeb, :controller
 
 
-  alias Scriptdrop.Company.{Pharmacy, Courier}
-  alias Scriptdrop.Customer.{Patient, Order}
+  alias Scriptdrop.Customer.{Order}
   alias Scriptdrop.Repo
 
   import Ecto.Query
@@ -14,15 +13,17 @@ defmodule ScriptdropWeb.CsvController do
 
   def export(conn, _params) do
     csv = from(
-      o in Order,
-      join: p in assoc(o, :pharmacy),
-      join: y in assoc(o, :patient),
-      join: a in assoc(y, :address),
-      join: c in assoc(p, :courier),
-      select: [y.name, a.street, p.name, o.delivered, o.undelieverable, c.name]
-    )
-    |> Repo.all()
-    csv = [["Patient name", "Patient Address", "Pharmacy Name", "Delivered?", "Undeliverable?", "Courier Company"] | csv ]
+            o in Order,
+            join: p in assoc(o, :pharmacy),
+            join: y in assoc(o, :patient),
+            join: a in assoc(y, :address),
+            join: c in assoc(p, :courier),
+            select: [y.name, a.street, p.name, o.delivered, o.undelieverable, c.name]
+          )
+          |> Repo.all()
+    csv = [
+      ["Patient name", "Patient Address", "Pharmacy Name", "Delivered?", "Undeliverable?", "Courier Company"] | csv
+    ]
 
 
     conn
@@ -32,8 +33,7 @@ defmodule ScriptdropWeb.CsvController do
   end
 
   defp csv_content(report) do
-    csv_content = report
-
+    _csv_content = report
                   |> CSV.encode
                   |> Enum.to_list
                   |> to_string
