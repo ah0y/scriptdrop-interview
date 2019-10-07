@@ -5,7 +5,7 @@ defmodule ScriptdropWeb.PageController do
     if user do
       redirect(conn, to: Routes.order_path(conn, :index))
     else
-      redirect(conn, to: Routes.session_path(conn, :new))
+      render(conn, "index.html")
     end
   end
 
