@@ -1,10 +1,8 @@
 {
-  "environments": {
-    "test": {
-      "scripts": {
-        "test-setup": "mix deps.get",
-        "test": "mix test ."
-      }
-    }
-  }
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    { "url": "https://github.com/joshwlewis/heroku-buildpack-elixir#heroku-ci" }
+  ]
 }
