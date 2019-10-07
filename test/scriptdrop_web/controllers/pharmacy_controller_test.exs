@@ -104,12 +104,12 @@ defmodule ScriptdropWeb.PharmacyControllerTest do
 
   describe "delete pharmacy" do
     setup [:create_pharmacy]
-#
-#    test "deletes chosen pharmacy", %{conn: conn, pharmacy: pharmacy} do
-#      conn = delete(conn, Routes.pharmacy_path(conn, :delete, pharmacy))
-#      #can't delete pharmacies!
-#      assert redirected_to(conn) == "/"
-#    end
+
+    test "deletes chosen pharmacy", %{conn: conn, pharmacy: pharmacy} do
+      conn = delete(conn, Routes.pharmacy_path(conn, :delete, pharmacy))
+      #can't delete pharmacies!
+      assert redirected_to(conn) == "/"
+    end
   end
 
   defp create_pharmacy(_) do

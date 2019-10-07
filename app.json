@@ -9,7 +9,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test": "mix test"
+        "test": "mix test-ci"
       }
     }
   }
