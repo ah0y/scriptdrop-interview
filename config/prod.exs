@@ -12,7 +12,7 @@ use Mix.Config
 config :scriptdrop, ScriptdropWeb.Endpoint,
        http: [port: {:system, "PORT"}],
        load_from_system_env: true,
-       url: [scheme: "https", host: "abedrop.herokuapp.com", port: 443],
+       url: [scheme: "https", host: "abedrop-staging.herokuapp.com/", port: 443],
        force_ssl: [rewrite_on: [:x_forwarded_proto]],
        secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
