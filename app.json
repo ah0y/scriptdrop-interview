@@ -1,8 +1,7 @@
 {
-  "name": "myappapi",
-  "description": "MyApp Backend Application",
+  "name": "drop",
+  "description": "drop",
   "scripts": {
-    "postdeploy": "/app/bin/myapp seed"
   },
   "env": {
     "POOL_SIZE": {
