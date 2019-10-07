@@ -4,5 +4,13 @@
   ],
   "buildpacks": [
     {"url": "https://github.com/HashNuke/heroku-buildpack-elixir"}
-  ]
+  ],
+
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "mix test"
+      }
+    }
+  }
 }
