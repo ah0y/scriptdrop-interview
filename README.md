@@ -1,4 +1,4 @@
-# Drop
+# Drop 3
 
 To start your Phoenix server:
 
